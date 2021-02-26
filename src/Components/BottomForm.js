@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import AlertBox from '../Components/AlertBox';
 import firebase from 'firebase/app';
 var firebaseConfig = {
     apiKey: "AIzaSyA8pLz0it3fsyGDM897C-5d447BsbQQyWA",
@@ -20,7 +21,8 @@ export default class BottomForm extends React.Component{
             pass: "",
             text: "Create Account",
             email: "",
-            code: ""
+            code: "",
+            errorText: ""
         }
     }
 
@@ -29,6 +31,11 @@ export default class BottomForm extends React.Component{
             this.setState({text: "Login"});
             this.registerFirebase();
         }
+    }
+
+    showError(errorText){
+        this.setState({errorText: errorText});
+        document.getElementsByClassName("alert-parent-hidden")[0].classList.toggle("alert-parent");
     }
 
     loginOrCreateAccount(){
@@ -57,16 +64,17 @@ export default class BottomForm extends React.Component{
                 window.location.reload();
             });
         }catch(e){
-            alert(e);
+            this.showError(e);
         }
         }else{
-            alert("Invalid details. Password must be longer than 6 characters")
+            this.showError("Invalid details. Password must be longer than 6 characters")
         }
     }
 
     render(){
         return(
             <div className="bottom-form">
+                <AlertBox/>
                 <center>
                 <input className="default-input" type="number" onInput={(event)=>{this.setState({cell: event.target.value})}} placeholder="Mobile Number"/><br/>
                 <input className="default-input" type="password" placeholder="Password (Minimum 6 Char)" onInput={(event)=>{this.setState({pass: event.target.value})}}/><br/>

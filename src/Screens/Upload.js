@@ -18,7 +18,8 @@ export default class Upload extends React.Component{
         this.state = {
             uploadStatus: '',
             image: Wave,
-            audioTitle: ''
+            audioTitle: '',
+            errorText: ""
         }
     }
 
@@ -45,6 +46,11 @@ export default class Upload extends React.Component{
         playingAudio.pause();
     }
 
+    showError(alertError){
+        this.setState({errorText: alertError});
+        document.getElementsByClassName("alert-parent-hidden")[0].classList.toggle("alert-parent");
+    }
+
     hideModal(){
         playingAudio.pause();
         document.getElementsByClassName("play-parent-hidden")[0].classList.toggle("play-parent");   
@@ -69,11 +75,18 @@ export default class Upload extends React.Component{
                 console.log("can't compute")
             }
         }
+
+        xhr.onreadystatechange = () => {
+            if(xhr.readyState == "4" & xhr.status == "200"){
+                //do nothing since it's being handled in the onload event handler
+            }else{
+                this.showError("There was an error " + xhr.status); 
+            }
+        }
         xhr.onload = () => {
                 this.setState({image: Complete});
                 setTimeout(()=>{document.getElementsByClassName("play-parent-hidden")[0].classList.toggle("play-parent");
                 this.setState({image: Wave});window.location.href = "/budget";}, 2200);
-
                 
         };
         

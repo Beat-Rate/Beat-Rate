@@ -7,7 +7,7 @@ export default class Desktop extends React.Component{
                 <center>
                     <h2>Thanks for checking us out :)<br/>
                     <small><br/>
-                        We're not yet desktop-ready, but you can still use this web app on mobile.    
+                        We're not yet desktop-ready, but you can still use this web app on mobile. 
                     </small></h2>
                 </center>
             </div>

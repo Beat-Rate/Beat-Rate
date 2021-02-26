@@ -6,6 +6,15 @@ export default class App extends React.Component{
 
 
   render(){
-    return <Desktop/>
+    if(window.screen.width > 800){
+      return <Desktop/>
+    }else{
+    if(localStorage.getItem("logged")){
+      return (loggedInRoutes)
+    }else{
+      return (loggedOutRoutes)
+    }
+    
+}
 }
 }
