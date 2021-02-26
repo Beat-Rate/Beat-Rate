@@ -17,7 +17,8 @@ export default class Upload extends React.Component{
         super();
         this.state = {
             uploadStatus: '',
-            image: Wave
+            image: Wave,
+            audioTitle: ''
         }
     }
 
