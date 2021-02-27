@@ -53,7 +53,8 @@ export default class Upload extends React.Component{
 
     hideModal(){
         playingAudio.pause();
-        document.getElementsByClassName("play-parent-hidden")[0].classList.toggle("play-parent");   
+        document.getElementById("cancel").setAttribute("disabled", "true")
+        document.getElementsByClassName("play-parent-hidden")[0].classList.toggle("play-parent");
     }
 
     processUpload(file, uid){
@@ -86,19 +87,21 @@ export default class Upload extends React.Component{
         xhr.onload = () => {
                 this.setState({image: Complete});
                 setTimeout(()=>{document.getElementsByClassName("play-parent-hidden")[0].classList.toggle("play-parent");
-                this.setState({image: Wave});window.location.href = "/budget";}, 2200);
-                
+                this.setState({image: Wave});window.location.href = "/budget";}, 2200);      
         };
         
         xhr.send(fd);
     }
 
-    
+    setGenre(event){
+        console.log(event.target.value);
+        this.setState({selectedGenre: event.target.value});
+    }
 
     render(){
         return(
             <div className="logged-in-container">
-                <PlayModal image={this.state.image} onClose={()=>{this.hideModal()}} onContinue={()=>{this.uploadSong()}} audioTitle={this.state.audioTitle}/>
+                <PlayModal image={this.state.image} onClose={()=>{this.hideModal()}} genreSelect={(event)=>{this.setGenre(event)}} onContinue={()=>{this.uploadSong()}} audioTitle={this.state.audioTitle}/>
                 <Upper pageTitle="Upload Song"/>
                 <br/>
                 

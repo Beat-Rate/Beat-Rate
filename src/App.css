@@ -67,6 +67,11 @@
   border-radius: 5px;
 }
 
+.pullup-minor{
+  margin-top: -30px;
+  margin-bottom: 10px;
+}
+
 .affirm-button{
   width: 67%;
   height: 44px;
