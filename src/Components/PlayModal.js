@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-var genres = ["hiphop" , "RB"]
+var genres = ["Hip Hop", "RnB", "Rock"];
 
 export default class PlayModal extends React.Component{
 
