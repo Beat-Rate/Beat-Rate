@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-var genres = localStorage.getItem("genres").split("/");
+var genres = ["hiphop" , "RB"]
 
 export default class PlayModal extends React.Component{
 

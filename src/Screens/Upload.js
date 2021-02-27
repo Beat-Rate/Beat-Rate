@@ -10,7 +10,7 @@ import Done from "../Components/Images/okay.gif";
 import Complete from "../Components/Images/complete.gif";
 
 var playingAudio;
-
+var { v4: uuidv4 } = require('uuid');
 export default class Upload extends React.Component{
 
     constructor(){
@@ -21,6 +21,7 @@ export default class Upload extends React.Component{
             audioTitle: '',
             errorText: ""
         }
+        this.firebaseDatabase = firebase.database();
     }
 
     upload(target){
@@ -40,7 +41,7 @@ export default class Upload extends React.Component{
     }
 
     uploadSong(){
-        this.processUpload(document.getElementById("chosen-file").files[0], 'reverend');
+        this.processUpload(document.getElementById("chosen-file").files[0], firebase.auth().currentUser.uid);
         console.log("uploading song...");
         console.log(playingAudio);
         playingAudio.pause();
@@ -56,19 +57,45 @@ export default class Upload extends React.Component{
         document.getElementById("cancel").setAttribute("disabled", "true")
         document.getElementsByClassName("play-parent-hidden")[0].classList.toggle("play-parent");
     }
+    checkFirebaseUploadResult(error,self){
+        if(error){
+        }
+        else{
+            self.displayUploadedAnimation();
+        }
+    }
+    displayUploadedAnimation(){
+        this.setState({image: Complete});
+        setTimeout(()=>{
+            document.getElementsByClassName("play-parent-hidden")[0].classList.toggle("play-parent");
+            this.setState({image: Wave});
+            window.location.href = "/budget";}, 2200); 
+    }
 
-    processUpload(file, uid){
-        this.setState({image: Loader})
-        //document.getElementsByClassName("loader-hidden")[0].classList.toggle("loader-showing");
-        console.log(uid);
-        var fd = new FormData();
-        console.log(file);
-        fd.append("chosen-file",file);
-        fd.append("user_id", uid);
-        var xhr = new XMLHttpRequest();
-        
-        xhr.open("POST", "https://onecab.co.za/share/upload.php?user_id="+uid);
-        
+    configureUserSongInFirebase(formData){
+        // construct resource url for accessing audio file
+        let reference = this.firebaseDatabase.ref("Users/"+formData.get("user_id")+"/Songs")
+        let songIdAndFileName = formData.get("song_id") + "-"+this.state.audioTitle 
+        var self = this;
+        let url = "https://onecab.co.za/share/uploads/"+ 
+                    formData.get("user_id")+"/"+songIdAndFileName
+        reference.push({
+            dateTime : new Date().getTime(),
+            url : url,
+            displayName: this.state.audioTitle
+
+        } , (error)=>{this.checkFirebaseUploadResult(error, self)});
+    }
+    configureXhrCallbacksTwo(xhr){
+        xhr.onreadystatechange = () => {
+            if(xhr.readyState == "4" & xhr.status == "200"){
+                //do nothing since it's being handled in the onload event handler
+            }else{
+                this.showError("There was an error " + xhr.status); 
+            }
+        }
+    }
+    configureXhrCallbacks(formData,xhr){
         xhr.onprogress = (e) => {
             if(e.lengthComputable){
                 console.log(e.loaded, e.total);
@@ -77,19 +104,22 @@ export default class Upload extends React.Component{
             }
         }
 
-        xhr.onreadystatechange = () => {
-            if(xhr.readyState == "4" & xhr.status == "200"){
-                //do nothing since it's being handled in the onload event handler
-            }else{
-                this.showError("There was an error " + xhr.status); 
-            }
-        }
         xhr.onload = () => {
-                this.setState({image: Complete});
-                setTimeout(()=>{document.getElementsByClassName("play-parent-hidden")[0].classList.toggle("play-parent");
-                this.setState({image: Wave});window.location.href = "/budget";}, 2200);      
+            this.configureUserSongInFirebase(formData)
+                  
         };
-        
+    }
+    processUpload(file, uid){
+        this.setState({image: Loader})
+        //document.getElementsByClassName("loader-hidden")[0].classList.toggle("loader-showing");
+        var fd = new FormData();
+        let song_id = uuidv4();
+        fd.append("chosen-file",file);
+        fd.append("user_id", uid);
+        fd.append("song_id",song_id);
+        var xhr = new XMLHttpRequest();
+        this.configureXhrCallbacks(fd,xhr);
+        xhr.open("POST", "https://onecab.co.za/share/upload.php");
         xhr.send(fd);
     }
 
