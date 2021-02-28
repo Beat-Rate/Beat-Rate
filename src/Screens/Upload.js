@@ -22,6 +22,7 @@ export default class Upload extends React.Component{
             errorText: ""
         }
         this.firebaseDatabase = firebase.database();
+        
     }
 
     upload(target){
