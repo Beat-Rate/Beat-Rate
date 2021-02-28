@@ -20,8 +20,8 @@ This application  helps artists gather tips/pointers to get better at their craf
 
 <h1> 
 
-<img width = "300px" src= "https://github.com/RonaldColyar/music-thing/blob/master/SampleGui/BudgetHub.png"/>
-<img width = "300px"  src = "https://github.com/RonaldColyar/music-thing/blob/master/SampleGui/MusicHub.png"/>
-<img width = "300px" src = "https://github.com/RonaldColyar/music-thing/blob/master/SampleGui/UploadHub.png"/>
+<img width = "200px" src= "https://github.com/RonaldColyar/music-thing/blob/master/SampleGui/BudgetHub.png"/>
+<img width = "200px"  src = "https://github.com/RonaldColyar/music-thing/blob/master/SampleGui/MusicHub.png"/>
+<img width = "200px" src = "https://github.com/RonaldColyar/music-thing/blob/master/SampleGui/UploadHub.png"/>
 
 </h1>
