@@ -1,7 +1,10 @@
 import React from 'react';
 import '../App.css';
 
-var genres = ["Hip Hop", "RnB", "Rock"];
+var genres = localStorage.getItem("genres")?.split("/");
+if(genres == null || genres == "null"){
+    var genres = ["Hip Hop", "RnB", "Rock"];
+}
 
 export default class PlayModal extends React.Component{
 
