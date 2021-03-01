@@ -6,7 +6,6 @@ import PlayModal from '../Components/PlayModal';
 import firebase from 'firebase';
 import Loader from '../Components/Images/loader.gif';
 import Wave from "../Components/Images/wave.png";
-import Done from "../Components/Images/okay.gif";
 import Complete from "../Components/Images/complete.gif";
 
 var playingAudio;
@@ -19,7 +18,8 @@ export default class Upload extends React.Component{
             uploadStatus: '',
             image: Wave,
             audioTitle: '',
-            errorText: ""
+            errorText: "",
+            selectedGenre: "Hip Hop"
         }
         this.firebaseDatabase = firebase.database();
         
@@ -75,6 +75,9 @@ export default class Upload extends React.Component{
 
     configureUserSongInFirebase(formData){
         // construct resource url for accessing audio file
+
+        //Added selected genre to firebase obj
+
         let reference = this.firebaseDatabase.ref("Users/"+formData.get("user_id")+"/Songs")
         let songIdAndFileName = formData.get("song_id") + "-"+this.state.audioTitle 
         var self = this;
@@ -83,7 +86,8 @@ export default class Upload extends React.Component{
         reference.push({
             dateTime : new Date().getTime(),
             url : url,
-            displayName: this.state.audioTitle
+            displayName: this.state.audioTitle,
+            genre: this.state.selectedGenre
 
         } , (error)=>{this.checkFirebaseUploadResult(error, self)});
     }
@@ -107,7 +111,6 @@ export default class Upload extends React.Component{
 
         xhr.onload = () => {
             this.configureUserSongInFirebase(formData)
-                  
         };
     }
     processUpload(file, uid){
