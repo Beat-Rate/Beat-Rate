@@ -111,7 +111,6 @@ export default class Upload extends React.Component{
 
         xhr.onload = () => {
             this.configureUserSongInFirebase(formData)
-                  
         };
     }
     processUpload(file, uid){
