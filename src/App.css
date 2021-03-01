@@ -1,278 +1,327 @@
-.lo-parent{
-  width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
   height: 100%;
-  background-color: #80DDFF;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 0;
+}
+
+body {
+  background: #121212;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+
+
+.lo-parent{
+width: 100%;
+height: 100%;
+background-color: #004643;
+position: absolute;
+top: 0px;
+left: 0px;
+z-index: 0;
 }
 
 .topright-button{
-  width: 150px;
-  height: 48px;
-  border: 0px;
-  background-color: #fff;
-  border-radius: 9px;
-  box-shadow: 0px 0px 7px 0px rgba(0,0,0,.2);
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 1;
-  font-size: 1em;
-  font-weight: 800;
+width: 150px;
+height: 48px;
+border: 0px;
+background-color: #fff;
+border-radius: 9px;
+box-shadow: 0px 0px 7px 0px rgba(0,0,0,.2);
+position: absolute;
+top: 10px;
+right: 10px;
+z-index: 1;
+font-size: 1em;
+font-weight: 800;
 }
 
 .text-body{
-  margin-top: 82px;
-  margin-left: 10px;
+margin-top: 82px;
+margin-left: 10px;
 }
 
 .text-body h2{
-  font-size: 2.15em;
-  margin-top: 0px;
+font-size: 2.15em;
+margin-top: -10px;
 }
 
 .text-body p{
-  font-size: 1.1em;
-  max-width: 85%;
-  font-weight: 700;
+font-size: 1.1em;
+max-width: 85%;
+font-weight: 700;
 }
 
 .text-body small{
-  font-size: .8em;
-  max-width: 85%;
-  margin-top: 20px;
+font-size: .8em;
+max-width: 85%;
+margin-top: 20px;
 }
 
 .bottom-form{
-  width: 100%;
-  background-color: #fff;
-  padding-top: 10px;
-  padding-bottom: 15px;
-  position: fixed;
-  bottom: 0px;
-  box-shadow: 0px -3px 7px 0px rgba(0,0,0,.125);
+width: 100%;
+background-color: #fff;
+padding-top: 10px;
+padding-bottom: 15px;
+position: fixed;
+bottom: 0px;
+box-shadow: 0px -3px 7px 0px rgba(0,0,0,.125);
 }
 
 .default-input{
-  width: 77%;
-  height: 44px;
-  margin-top: 20px;
-  font-size: .9em;
-  font-weight: 700;
-  text-align: center;
-  border: 0px;
-  box-shadow: 0px 1px 7px 0px rgba(0,0,0,.155);
-  border-radius: 5px;
+width: 77%;
+height: 44px;
+margin-top: 20px;
+font-size: .9em;
+font-weight: 700;
+text-align: center;
+border: 0px;
+box-shadow: 0px 1px 7px 0px rgba(0,0,0,.155);
+border-radius: 5px;
 }
 
 .pullup-minor{
-  margin-top: -30px;
-  margin-bottom: 10px;
+margin-top: -30px;
+margin-bottom: 10px;
 }
 
 .affirm-button{
-  width: 67%;
-  height: 44px;
-  border: 0px;
-  border-radius: 9px;
-  margin-top: 20px;
-  font-size: .9em;
-  font-weight: 700;
-  background-color: #80DDFF;
-  box-shadow: 0px 1px 7px 0px rgba(0,0,0,.155); 
+width: 67%;
+height: 44px;
+border: 0px;
+border-radius: 9px;
+margin-top: 20px;
+font-size: .9em;
+font-weight: 700;
+background-color: #80DDFF;
+box-shadow: 0px 1px 7px 0px rgba(0,0,0,.155); 
 }
 
 ::placeholder{
-  color: #333;
+color: #333;
 }
 
 .logged-in-container{
-  width: calc(100% - 20px);
-  height: calc(100% - 20px);
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background-color: #fff;
-  padding: 10px;
+width: calc(100% - 20px);
+height: calc(100% - 20px);
+position: absolute;
+top: 0px;
+left: 0px;
+background-color: #fff;
+padding: 10px;
 }
 
 .logged-in-container h2{
-  font-size: 2.4em;
-  margin-left: 10px;
+font-size: 2.4em;
+margin-left: 10px;
 }
 
 .top-bar{
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  background-color: #fff;
+position: fixed;
+top: 0px;
+left: 0px;
+width: 100%;
+background-color: #fff;
 }
 
 .top-bar h4{
-  margin-left: 10px;
-  color: gold;
-  margin-top: 30px;
+margin-left: 10px;
+color: #f9bc60;
+font-size:1.5em;
+margin-top: 30px;
 }
 
 .top-bar #menu{
-  top: 10px;
-  right: 10px;
-  position: absolute;
-  width: 60px;
+top: 10px;
+right: 10px;
+position: absolute;
+width: 60px;
 }
 
 .main-body{
-  position: relative;
-  margin-top: 145px;
-  overflow-y: auto;
-  height: 80%;
-  background-color:#fff;
+position: relative;
+margin-top: 145px;
+overflow-y: auto;
+height: 80%;
+background-color:#fff;
 }
 
 .main-cta{
-  position: absolute;
-  bottom: 60px;
-  width: 50%;
-  left: 25%;
-  height: 50px;
-  background-color: #80DDFF;
-  border-radius: 10px;
-  border: 0px;
-  font-weight: 900;
-  font-size: 1.1em;
-  box-shadow: 0px 0px 7px 0px rgba(0,0,0,.2);
+position: absolute;
+bottom: 60px;
+width: 50%;
+left: 25%;
+height: 50px;
+background-color: #f9bc60;
+border-radius: 10px;
+border: 0px;
+font-weight: 900;
+font-size: 1.1em;
+box-shadow: 0px 0px 7px 0px rgba(0,0,0,.2);
 }
 
 .songs-container{
-  height: 500px;
-  background-color: #fff;
+height: 500px;
+background-color: #fff;
 }
 
 .songs-container .no-songs{
-  margin-top: 40%;
-  width: 70%;
-  font-weight: 700;
+margin-top: 40%;
+width: 70%;
+font-weight: 700;
 }
 
 .upload-song{
-  width: 160px;
-  height: 160px;
-  background-color: #f0f0f0;
-  border-radius: 15px;
-  position: absolute;
-  margin-left: calc(50% - 80px);
-  margin-top: 30%;
+width: 160px;
+height: 160px;
+background-color: #f0f0f0;
+border-radius: 15px;
+position: fixed;
+margin-left: calc(50% - 80px);
+color: #000;
 }
 
 .upload-song img{
-  position: relative;
-  margin-top: 20px;
-  filter: drop-shadow(0px 2px 4px rgba(0,0,0,.2));
+position: relative;
+margin-top: 20px;
+filter: drop-shadow(0px 2px 4px rgba(0,0,0,.2));
 }
 
 .audio-selector{
-  display: none;
+display: none;
 }
 
 .play-parent-hidden, .alert-parent-hidden{
-  opacity: 0;
-  bottom: -100%;
-  position: absolute;
-  transition: .3s;
+opacity: 0;
+bottom: -100%;
+position: absolute;
+transition: .3s;
 }
 
 .play-parent, .alert-parent{
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  position: absolute;
-  background-color: rgba(0,0,0,.325);
-  z-index: 2;
-  opacity: 1;
-  transition: .3s;
+width: 100%;
+height: 100%;
+left: 0px;
+top: 0px;
+position: absolute;
+background-color: rgba(0,0,0,.325);
+z-index: 2;
+opacity: 1;
+transition: .3s;
 }
 
 .play-modal, .alert-box{
-  width: 80%;
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 0px 7px 0px rgba(0,0,0,.2);
+width: 80%;
+position: absolute;
+top: 30%;
+left: 10%;
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0px 0px 7px 0px rgba(0,0,0,.2);
 }
 
 
 
 .play-modal p{
-  font-weight: 600;
+font-weight: 600;
 }
 
 .play-modal img{
-  height: 50px;
+height: 50px;
 }
 
 .no-bg{
-  background: rgba(0,0,0,.0);
-  width: 50%;
-  height: 45px;
-  font-size: 1em;
-  font-weight: 700;
-  border: 0px;
+background: rgba(0,0,0,.0);
+width: 50%;
+height: 45px;
+font-size: 1em;
+font-weight: 700;
+border: 0px;
 }
 
 .cancel{
-  color: #666
+color: #666
 }
 
 button{
-  cursor: pointer;
+cursor: pointer;
 }
 
 .list-component{
-  width: 90%;
-  position: relative;
-  margin-left: -5%;
+width: 90%;
+position: relative;
+margin-left: -5%;
 }
 
 .list-component b{
-  position: relative;
-  float: left;
-  margin-top: 10px;
+position: relative;
+float: left;
+margin-top: 10px;
+color: #000;
 }
 
 .list-controls{
-  width: 100%;
-  height: 50px;
-  float: left;
+width: 100%;
+height: 50px;
+float: left;
 }
 
 .list-cta{
-  float: left;
-  font-weight: 700;
-  font-size: .9em;
-  margin-top: -15px;
-  background: none;
-  text-decoration: underline;
-  color: #666;
-  border: 0px;
-  text-align: left;
-  padding: 0px;
-  margin-right: 20px;
+float: left;
+font-weight: 700;
+font-size: .9em;
+margin-top: -15px;
+background: none;
+text-decoration: underline;
+color: #666;
+border: 0px;
+text-align: left;
+padding: 0px;
+margin-right: 20px;
 }
 
 .list-play-button{
-  margin-top: 10px;
-  float: right;
+margin-top: 10px;
+float: right;
 }
 
 .list-separator{
-  height: 1px;
-  border: 0px;
-  background-color: #333;
-  opacity: .15;
+height: 1px;
+border: 0px;
+background-color: #333;
+opacity: .15;
 }
+
+
+@media only screen and (max-width: 600px) {
+  .text-body h2{
+    position: relative;
+    font-size: 2.20em;
+    margin-top: 0.5em;
+    }
+    .text-body p{
+      position: relative;
+      margin-left:1.3em;
+      font-weight: 600;
+      }
+      .text-body small{
+        position: absolute;
+        margin-left:-12em;
+        margin-top:1em;
+        font-weight: 400;
+        }
+}
+
