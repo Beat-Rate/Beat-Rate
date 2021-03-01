@@ -1,4 +1,4 @@
-export default function localStorageCalculator(){
+export default function localStorageLeft(){
         var allStrings = '';
         for(var key in window.localStorage){
             if(window.localStorage.hasOwnProperty(key)){
