@@ -19,6 +19,18 @@ export default class SongHandler{
         this.reference.update(updates)
     }
     placeInGlobal(){
+        let globalRef = firebase.database().ref("Global")
+        this.reference.on("value"  , data=>{
+            let song = data.val();
+            globalRef.push(song , error=>{
+                if(error){
+
+                }
+                else{
+                    console.log(song) 
+                }
+            })
+        })
 
     }
     gatherReviews(){
