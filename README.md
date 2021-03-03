@@ -27,5 +27,3 @@ This application  helps artists gather tips/pointers to get better at their craf
 
 # How to contribute to Music Thing?
 Check [this](https://github.com/RonaldColyar/music-thing/blob/master/Contributions.md)
-
-
