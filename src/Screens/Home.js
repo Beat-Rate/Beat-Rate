@@ -5,7 +5,7 @@ import AlertBox from '../Components/AlertBox';
 import firebase from 'firebase/app';
 import SongListComp from '../Components/SongListComp';
 import localStorageLeft from '../Components/StorageCalculator'
-
+var { v4: uuidv4 } = require('uuid');
 export default class Home extends React.Component{
 
     constructor(){
@@ -22,9 +22,9 @@ export default class Home extends React.Component{
         this.setState({errorText: alertError});
         document.getElementsByClassName("alert-parent-hidden")[0].classList.toggle("alert-parent");
     }
-
-    componentDidMount(){
+    gatherData(){
         var thisUser = JSON.parse(localStorage.getItem("user")).uid;
+        let arr = []
         firebase.database().ref("Users/"+thisUser+"/Songs").on("value", data => {
             var songList = data.val();
             if(songList == null || songList == 'null'){
@@ -33,12 +33,14 @@ export default class Home extends React.Component{
             for(var key in songList){
                 //sets key of the object
                 songList[key].key = key
-                console.log(key)
-                this.state.songList.push(songList[key]);
-                this.setState({songList: this.state.songList});
+                arr.push(songList[key]);
             }
+            this.setState({songList: arr});
         }
         })
+    }
+    componentDidMount(){
+       this.gatherData()
     }
     
     truncate(str, n){
@@ -59,7 +61,10 @@ export default class Home extends React.Component{
                 this.state.songList.length > 0 ?
 
                 this.state.songList.map(thisSong=> {
-                    return (<SongListComp songName={this.truncate(thisSong.displayName, 35)} propkey = {thisSong.key} 
+                    return (<SongListComp songName={this.truncate(thisSong.displayName, 35)} 
+                    key = {uuidv4()}
+                    id = {thisSong.key} 
+                    update = {()=>{this.gatherData()}}
                     setparentstate = {this.setState}
                     songList  = {this.state.songList}
                     removeSong = {this.removeSong}/>);

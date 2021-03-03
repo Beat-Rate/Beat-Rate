@@ -3,15 +3,16 @@ import firebase from 'firebase';
 
 //we should have access to every unique song id from push
 
-class SongHandler{
-    constructor(PushId){
-        this.pathing = "Users/" + firebase.auth().currentUser.uid+"/Songs/"+PushId
-        this.reference = firebase.database().ref(pathing)
+export default class SongHandler{
+    constructor(PushId,uid){
+        this.pathing = "Users/" + uid+"/Songs/"+PushId
+        console.log(PushId,uid)
+        this.reference = firebase.database().ref(this.pathing)
 
     }
-    changeDisplayName( newName){
+    changeDisplayName( newName , func){
             let updates = {displayName : newName};
-            this.reference.update(updates)
+            this.reference.update(updates, func)
     }
     setBudget(number){
         let updates = {budget: number}
@@ -28,8 +29,17 @@ class SongHandler{
     // username of the reporter
     //data of the report
     //place in a global scope
-    reportReview(ReportData){
+    reportReview(reportData){
+        let reportRef = firebase.database().ref("Reported")
+        reportRef.push(reportData , error=>{
+            if(error){
 
+            }
+            else{
+                
+            }
+
+        })
 
     }
 

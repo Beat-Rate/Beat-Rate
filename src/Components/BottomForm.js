@@ -49,19 +49,26 @@ export default class BottomForm extends React.Component{
             this.register(cell, pass, email);
         }
     }
+
+    setAuthInformationAndReload(res){
+        var user = res.user;
+        localStorage.setItem('logged', true);
+        localStorage.setItem('user', JSON.stringify(user));
+        window.location.reload();
+    }
     
     login(cell, pass){
-        console.log("loggin in", cell, pass)
+        firebase.auth().signInWithEmailAndPassword(`${cell}@ocaccounts.co.za`, pass).then(res=>{
+            this.setAuthInformationAndReload(res)
+
+        })
     }
 
     register(cell, pass, email){
         if(pass.length > 6 & cell.length == 10 & cell.split("")[0] == "0" || cell.split("")[0] == 0){
             try{
             firebase.auth().createUserWithEmailAndPassword(`${cell}@ocaccounts.co.za`, pass).then(res => {
-                var user = res.user;
-                localStorage.setItem('logged', true);
-                localStorage.setItem('user', JSON.stringify(user));
-                window.location.reload();
+                this.setAuthInformationAndReload(res)
             });
         }catch(e){
             this.showError(e);
