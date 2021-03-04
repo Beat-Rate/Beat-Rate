@@ -104,6 +104,7 @@ export default class SongListComp extends React.Component{
                         <button
                             style = {{opacity:(this.state.editing? 0:1 )}}
                             onClick = {()=>{window.location.replace("http://localhost:3000/budget/"+this.props.id)}}
+                            className= "list-cta"
                         >
                             Pay For Reviews!
                         </button>
