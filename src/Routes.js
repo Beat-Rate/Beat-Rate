@@ -17,8 +17,8 @@ export var loggedInRoutes =
       <Upload/>
     </Route>
 
-    <Route exact path="/budget">
-      <Budget/>
+    <Route exact path="/budget/:pushId" component = {Budget}>
+      
     </Route>
     
   </Switch>

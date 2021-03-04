@@ -43,16 +43,36 @@ export default class SongListComp extends React.Component{
     }
    
     render(){
-        
-        return(
-            <div className="list-component">
-                <b>{this.props.songName}</b>  <img className="list-play-button" src={PlayImage}/>
-                <div className="list-controls">
-                <button onClick ={()=>{this.ChangeName("buggy")}} className="list-cta">Rename</button> &nbsp; &nbsp; 
-                <button onClick = {()=>{this.song_handler.placeInGlobal()}} className="list-cta">Delete</button>
-                <hr noshade className="list-separator"/>
+        if(this.props.is_paid == true){
+            return(
+                <div className="list-component">
+                    <b>{this.props.songName}</b>  <img className="list-play-button" src={PlayImage}/>
+                    <div className="list-controls">
+                    <button onClick ={()=>{this.ChangeName("buggy")}} className="list-cta">Rename</button> &nbsp; &nbsp; 
+                    <button onClick = {()=>{this.song_handler.placeInGlobal()}} className="list-cta">Delete</button>
+                    <hr noshade className="list-separator"/>
+                    </div>
                 </div>
-            </div>
-        );
+            );
+
+        }
+        else{
+    
+            return(
+                    <div className="list-component">
+                        <b>{this.props.songName}</b>  <img className="list-play-button" src={PlayImage}/>
+                        <div className="list-controls">
+                        <button onClick ={()=>{this.ChangeName("buggy")}} className="list-cta">Rename</button> &nbsp; &nbsp; 
+                        <button onClick = {()=>{this.removeSongFromFirebase()}} className="list-cta">Delete</button>
+                        <button onClick = {()=>{window.location.href = "/budget/"+this.props.id;}} className ="list-cta" >Pay For Review</button>
+                        <hr noshade className="list-separator"/>
+                        </div>
+                    </div>
+                );
+
+
+            
+        }
+ 
     }
 }
