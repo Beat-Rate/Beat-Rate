@@ -69,7 +69,9 @@ export default class Upload extends React.Component{
         this.setState({image: Complete});
         setTimeout(()=>{
             document.getElementsByClassName("play-parent-hidden")[0].classList.toggle("play-parent");
-            this.setState({image: Wave});}, 2200); 
+            this.setState({image: Wave});
+            window.location.replace('http://localhost:3000/')
+        }, 2200); 
     }
 
     configureUserSongInFirebase(formData){
