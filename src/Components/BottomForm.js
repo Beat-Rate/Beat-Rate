@@ -29,7 +29,6 @@ export default class BottomForm extends React.Component{
     componentDidMount(){
         if(window.location.href.indexOf("/signin") > -1){
             this.setState({text: "Login"});
-            this.registerFirebase();
         }
     }
 
@@ -54,7 +53,7 @@ export default class BottomForm extends React.Component{
         var user = res.user;
         localStorage.setItem('logged', true);
         localStorage.setItem('user', JSON.stringify(user));
-        window.location.reload();
+        window.location.replace('http://localhost:3000/')
     }
     
     login(cell, pass){
