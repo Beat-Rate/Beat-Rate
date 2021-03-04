@@ -10,14 +10,22 @@ export default class SongHandler{
         this.reference = firebase.database().ref(this.pathing)
 
     }
-    changeDisplayName( newName , func){
+    changeDisplayName( newName ){
             let updates = {displayName : newName};
-            this.reference.update(updates, func)
+            this.reference.update(updates, error=>{
+                if (error){
+
+                }
+                else{
+
+                }
+            })
     }
     setBudget(number){
         let updates = {budget: number}
         this.reference.update(updates)
     }
+    
     placeInGlobal(){
         let globalRef = firebase.database().ref("Global")
         this.reference.on("value"  , data=>{
@@ -27,7 +35,7 @@ export default class SongHandler{
 
                 }
                 else{
-                    console.log(song) 
+                    
                 }
             })
         })

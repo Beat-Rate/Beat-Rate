@@ -70,7 +70,8 @@ export default class Upload extends React.Component{
         setTimeout(()=>{
             document.getElementsByClassName("play-parent-hidden")[0].classList.toggle("play-parent");
             this.setState({image: Wave});
-            window.location.href = "/budget";}, 2200); 
+            window.location.replace('http://localhost:3000/')
+        }, 2200); 
     }
 
     configureUserSongInFirebase(formData){
