@@ -1,6 +1,8 @@
 import React from "react";
 import "../App.css";
 import PlayImage from "../Components/Images/play-img.png";
+import CancelImage from "../Components/Images/cancel.png"
+import ConfirmImage from "../Components/Images/confirm.png"
 import SongHandler from "../SongHandler"
 
 export default class SongListComp extends React.Component{
@@ -49,13 +51,20 @@ export default class SongListComp extends React.Component{
         if(this.props.is_paid == true){
             return(
                 <div className="list-component">
-                <b  style = {{opacity:(this.state.editing? 0:1)}}>{this.props.songName}</b>  
+                <b className = "b" style = {{opacity:(this.state.editing? 0:1)}}  >{this.props.songName}</b>  
 
-                <img style = {{opacity:(this.state.editing?0:1)}}  
-                     className="list-play-button" 
-                     src={PlayImage}/>
+                <img 
+                      
+                     className={this.state.editing? "confirm-button":"list-play-button" }
+                     src={ this.state.editing? ConfirmImage:PlayImage}/>
+                <img
+                    style = {{opacity:(this.state.editing? 1:0)}}  
+                    className = "cancel-button"
+                    src = {CancelImage}                    
+                >
+                </img>
 
-                <div  style = {{opacity:(this.state.editing? 0:1)}}  
+                <div  
                       className="list-controls">
 
                     <button style = {{opacity:(this.state.editing? 0:1)}}  
@@ -64,31 +73,52 @@ export default class SongListComp extends React.Component{
                     </button> &nbsp; &nbsp; 
 
                     <button  
-                        style = {{opacity:(this.state.editing? 0:1 )}}
+                       style = {{opacity:(this.state.editing? 0:1)}}  
                         onClick = {()=>{this.song_handler.placeInGlobal()}} 
                         className="list-cta">Delete
                     </button>
-                   
-                    <hr noshade className="list-separator"/>
-                </div>
-                    <input style = {{opacity:(this.state.editing? 1:0)}}  
+                    <button
+                        style = {{opacity:(this.state.editing? 0:1)}}  
+                        onClick = {()=>{}}
+                        className= "list-cta"
+                    >
+                        View Reviews!
+                    </button>
+                    <input 
+                           className = "edit-input" 
+                           style = {{opacity:(this.state.editing? 1:0)}}  
                            placeholder = "New Name" 
                           ></input>  
+                     
+                    <hr style = {{
+                        }} noshade className="list-separator"/>
+
+                </div>
+               
             </div>
-            );
+        );
+
+
 
         }
         else{
     
             return(
                 <div className="list-component">
-                    <b  style = {{opacity:(this.state.editing? 0:1)}}>{this.props.songName}</b>  
+                    <b className = "b" style = {{opacity:(this.state.editing? 0:1)}}  >{this.props.songName}</b>  
 
-                    <img style = {{opacity:(this.state.editing?0:1)}}  
-                         className="list-play-button" 
-                         src={PlayImage}/>
+                    <img 
+                          
+                         className={this.state.editing? "confirm-button":"list-play-button" }
+                         src={ this.state.editing? ConfirmImage:PlayImage}/>
+                    <img
+                        style = {{opacity:(this.state.editing? 1:0)}}  
+                        className = "cancel-button"
+                        src = {CancelImage}                    
+                    >
+                    </img>
 
-                    <div  style = {{opacity:(this.state.editing? 0:1)}}  
+                    <div  
                           className="list-controls">
 
                         <button style = {{opacity:(this.state.editing? 0:1)}}  
@@ -97,23 +127,28 @@ export default class SongListComp extends React.Component{
                         </button> &nbsp; &nbsp; 
 
                         <button  
-                            style = {{opacity:(this.state.editing? 0:1 )}}
+                           style = {{opacity:(this.state.editing? 0:1)}}  
                             onClick = {()=>{this.song_handler.placeInGlobal()}} 
                             className="list-cta">Delete
                         </button>
                         <button
-                            style = {{opacity:(this.state.editing? 0:1 )}}
+                            style = {{opacity:(this.state.editing? 0:1)}}  
                             onClick = {()=>{window.location.replace("http://localhost:3000/budget/"+this.props.id)}}
                             className= "list-cta"
                         >
                             Pay For Reviews!
                         </button>
-                       
-                        <hr noshade className="list-separator"/>
-                    </div>
-                        <input style = {{opacity:(this.state.editing? 1:0)}}  
+                        <input 
+                               className = "edit-input" 
+                               style = {{opacity:(this.state.editing? 1:0)}}  
                                placeholder = "New Name" 
                               ></input>  
+                         
+                        <hr style = {{
+                            }} noshade className="list-separator"/>
+
+                    </div>
+                   
                 </div>
             );
 
