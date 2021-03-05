@@ -281,11 +281,11 @@ button{
 }
 .confirm-button{
   width: 40px;
-  position: relative; left: 84px; top: -10px;
+  position: relative; left: 144px; top: -10px;
 }
 .cancel-button{
   width: 40px;
-  position: relative; left: -20px;top: -7px;
+  position: relative; left: 50px;top: -7px;
 }
 .edit-input{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.582), 0 6px 10px 0 rgba(0, 0, 0, 0.561);

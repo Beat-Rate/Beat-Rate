@@ -10,14 +10,14 @@ export default class SongHandler{
         this.reference = firebase.database().ref(this.pathing)
 
     }
-    changeDisplayName( newName ){
+    changeDisplayName( newName  , fun){
             let updates = {displayName : newName};
             this.reference.update(updates, error=>{
                 if (error){
 
                 }
                 else{
-
+                    fun()
                 }
             })
     }

@@ -10,28 +10,31 @@ export default class SongListComp extends React.Component{
     constructor(props){
         super(props);
         this.song_handler = new SongHandler(
-            this.props.id,JSON.parse(localStorage.getItem("user")).uid)
+            this.props.id,JSON.parse(localStorage.getItem("user")).uid);
         this.state = {
-            editing:false
-        }
+            editing:false , 
+            data :""
+        };
     }
     removeSongFromFirebase(){
         this.song_handler.reference.set(null, (error )=>{
             if(error){
             }
             else{
-                this.removeSongFromParentList()
-                this.props.update()
+                this.removeSongFromParentList();
+                this.props.update();
             }
         })
     }
+    //setting list empty because firebase re-renders
     removeSongFromParentList(){
-        this.props.setparentstate({songList :[]})
+        this.props.setparentstate({songList :[]});
     }
-    ChangeName(name){
-        this.song_handler.changeopacityName(name, ()=>{
-            this.removeSongFromParentList()
-            this.props.update()
+    ChangeName(){
+        this.song_handler.changeDisplayName(this.state.data,()=>{
+            this.removeSongFromParentList();
+            this.props.update();
+            this.state.editing =false;
         } )
     }
     currentSongIndex(){
@@ -110,10 +113,15 @@ export default class SongListComp extends React.Component{
                     <img 
                           
                          className={this.state.editing? "confirm-button":"list-play-button" }
-                         src={ this.state.editing? ConfirmImage:PlayImage}/>
+                         src={ this.state.editing? ConfirmImage:PlayImage}
+                         onClick = {this.state.editing? ()=>{this.ChangeName()} : ()=>{}}/>
+                         
                     <img
                         style = {{opacity:(this.state.editing? 1:0)}}  
                         className = "cancel-button"
+                        onClick = {()=>{
+                            this.setState({editing:false});
+                        }}
                         src = {CancelImage}                    
                     >
                     </img>
@@ -128,18 +136,24 @@ export default class SongListComp extends React.Component{
 
                         <button  
                            style = {{opacity:(this.state.editing? 0:1)}}  
-                            onClick = {()=>{this.song_handler.placeInGlobal()}} 
+                            onClick = {this.state.editing? 
+                                ()=>{}: //based on state
+                                ()=>{this.removeSongFromFirebase()}} 
                             className="list-cta">Delete
                         </button>
                         <button
                             style = {{opacity:(this.state.editing? 0:1)}}  
-                            onClick = {()=>{window.location.replace("http://localhost:3000/budget/"+this.props.id)}}
+                            onClick = {this.state.editing? 
+                                        ()=>{}: //based on state
+                                        ()=>{window.location.replace("http://localhost:3000/budget/"+this.props.id)}}
                             className= "list-cta"
                         >
                             Pay For Reviews!
                         </button>
                         <input 
                                className = "edit-input" 
+                               onInput={(event)=>{this.setState({data: event.target.value})}}
+                               
                                style = {{opacity:(this.state.editing? 1:0)}}  
                                placeholder = "New Name" 
                               ></input>  
