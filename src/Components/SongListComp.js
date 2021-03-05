@@ -73,7 +73,8 @@ export default class SongListComp extends React.Component{
                 </div>
                     <input style = {{opacity:(this.state.editing? 1:0)}}  
                            placeholder = "New Name" 
-                          ></input>  
+                           className = "default-input"
+                          />
             </div>
             );
 
@@ -113,7 +114,8 @@ export default class SongListComp extends React.Component{
                     </div>
                         <input style = {{opacity:(this.state.editing? 1:0)}}  
                                placeholder = "New Name" 
-                              ></input>  
+                               className = "default-input no-margins"
+                              />
                 </div>
             );
 
