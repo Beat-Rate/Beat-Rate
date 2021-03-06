@@ -12,7 +12,6 @@ export default class SignIn extends React.Component{
         return(
             <div className="lo-parent">
                 <TRButton title="Sign Up" onClick={()=>{this.toSignUp()}}/>
-
                 <div className="text-body"><br/>
                 <h2>Get Rated ⭐️</h2>
                 <p>Welcome back.</p>
