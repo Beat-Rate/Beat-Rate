@@ -91,6 +91,7 @@ export default class SongListComp extends React.Component{
                            className = "edit-input" 
                            style = {{opacity:(this.state.editing? 1:0)}}  
                            placeholder = "New Name" 
+
                           ></input>  
                      
                     <hr style = {{
@@ -98,6 +99,9 @@ export default class SongListComp extends React.Component{
 
                 </div>
                
+
+                     className = "default-input"
+                          />
             </div>
         );
 
@@ -133,7 +137,6 @@ export default class SongListComp extends React.Component{
                              onClick = {()=>{this.setState({editing:true})}} 
                             className="list-cta">Rename
                         </button> &nbsp; &nbsp; 
-
                         <button  
                            style = {{opacity:(this.state.editing? 0:1)}}  
                             onClick = {this.state.editing? 
@@ -163,6 +166,10 @@ export default class SongListComp extends React.Component{
 
                     </div>
                    
+
+                               className = "default-input no-margins"
+                              />
+
                 </div>
             );
 
