@@ -6,9 +6,9 @@ export default class ViewReviews extends React.Component {
     render() {
         return (
             <>
-            <OverallReview rating = {(5).toFixed(1)}/>
+            <OverallReview rating = {(4).toFixed(1)}/>
             <div className = "review-list-container">
-            <ReviewListComp/>
+            <ReviewListComp num = {5}/>
                 
             </div>
             </>
