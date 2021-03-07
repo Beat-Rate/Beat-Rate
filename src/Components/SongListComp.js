@@ -99,9 +99,6 @@ export default class SongListComp extends React.Component{
 
                 </div>
                
-
-                     className = "default-input"
-                          />
             </div>
         );
 
@@ -166,9 +163,6 @@ export default class SongListComp extends React.Component{
 
                     </div>
                    
-
-                               className = "default-input no-margins"
-                              />
 
                 </div>
             );

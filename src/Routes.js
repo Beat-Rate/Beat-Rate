@@ -5,6 +5,7 @@ import Home from './Screens/Home';
 import Upload from './Screens/Upload';
 import Budget from './Screens/Budget';
 import Desktop from './Screens/Desktop';
+import ViewReviews from './Screens/ViewReviews';
 
 export var loggedInRoutes =
 <Router>
@@ -15,6 +16,10 @@ export var loggedInRoutes =
 
     <Route exact path="/upload">
       <Upload/>
+    </Route>
+    <Route exact path ="/view-reviews">
+
+      <ViewReviews/>
     </Route>
 
     <Route exact path="/budget/:pushId" component = {Budget}>
