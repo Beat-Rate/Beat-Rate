@@ -109,54 +109,39 @@ export default class SongListComp extends React.Component{
     
             return(
                 <div className="list-component">
-                    <b className = "b" style = {{opacity:(this.state.editing? 0:1)}}  >{this.props.songName}</b>  
+                    <b className = "b"  >{this.props.songName}</b>  
 
                     <img 
                           
-                         className={this.state.editing? "confirm-button":"list-play-button" }
-                         src={ this.state.editing? ConfirmImage:PlayImage}
-                         onClick = {this.state.editing? ()=>{this.ChangeName()} : ()=>{}}/>
+                         className={"list-play-button" }
+                         src={PlayImage}
+                         />
                          
-                    <img
-                        style = {{opacity:(this.state.editing? 1:0)}}  
-                        className = "cancel-button"
-                        onClick = {()=>{
-                            this.setState({editing:false});
-                        }}
-                        src = {CancelImage}                    
-                    >
-                    </img>
+                
 
                     <div  
                           className="list-controls">
 
-                        <button style = {{opacity:(this.state.editing? 0:1)}}  
-                             onClick = {()=>{this.setState({editing:true})}} 
+                        <button 
+                             
                             className="list-cta">Rename
                         </button> &nbsp; &nbsp; 
                         <button  
-                           style = {{opacity:(this.state.editing? 0:1)}}  
-                            onClick = {this.state.editing? 
-                                ()=>{}: //based on state
+                           
+                            onClick = {
                                 ()=>{this.removeSongFromFirebase()}} 
                             className="list-cta">Delete
                         </button>
                         <button
-                            style = {{opacity:(this.state.editing? 0:1)}}  
-                            onClick = {this.state.editing? 
-                                        ()=>{}: //based on state
+                         
+                            onClick = {
+                                        
                                         ()=>{window.location.replace("http://localhost:3000/budget/"+this.props.id)}}
                             className= "list-cta"
                         >
                             Pay For Reviews!
                         </button>
-                        <input 
-                               className = "edit-input" 
-                               onInput={(event)=>{this.setState({data: event.target.value})}}
-                               
-                               style = {{opacity:(this.state.editing? 1:0)}}  
-                               placeholder = "New Name" 
-                              ></input>  
+                    
                          
                         <hr style = {{
                             }} noshade className="list-separator"/>

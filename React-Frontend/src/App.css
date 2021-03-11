@@ -94,7 +94,7 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  background-color: #fff;
+  background-color: #161b22;
   padding: 10px;
 }
 
@@ -108,7 +108,7 @@
   top: 0px;
   left: 0px;
   width: 100%;
-  background-color: #fff;
+  background-color: #161b22;
 }
 
 .top-bar h4{
@@ -123,44 +123,51 @@
   position: absolute;
   width: 60px;
 }
+.top-bar h2 {
+  color: #fff;
+}
 
 .main-body{
   position: relative;
   margin-top: 145px;
   overflow-y: auto;
-  height: 80%;
-  background-color:#fff;
+  height: 74%;
+
+  background-color: #242c38;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.664);
 }
 
 .main-cta{
   position: absolute;
-  bottom: 60px;
+  
+  bottom: 40px;
   width: 50%;
   left: 25%;
-  height: 50px;
-  background-color: #80DDFF;
+  height: 70px;
+  background-color: #355C7D;
   border-radius: 10px;
   border: 0px;
   font-weight: 900;
   font-size: 1.1em;
-  box-shadow: 0px 0px 7px 0px rgba(0,0,0,.2);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.664);
 }
 
 .songs-container{
-  height: 500px;
-  background-color: #fff;
+  height: 570px;
+ 
+  border-radius: 6px;
 }
 
 .songs-container .no-songs{
   margin-top: 40%;
-  width: 70%;
+  width: 70%; 
   font-weight: 700;
 }
 
 .upload-song{
   width: 160px;
   height: 160px;
-  background-color: #f0f0f0;
+  background-color: #161b22;
   border-radius: 15px;
   position: absolute;
   margin-left: calc(50% - 80px);
@@ -242,7 +249,9 @@ button{
 .list-component b{
   position: relative;
   float: left;
+  font-size: 17px;
   margin-top: 10px;
+  color: #fff;
 }
 
 .list-controls{
@@ -260,7 +269,7 @@ button{
   position: relative;
   background: none;
   text-decoration: underline;
-  color: #666;
+  color: #888;
   border: 0px;
   text-align: left;
   padding: 0px;
@@ -275,9 +284,9 @@ button{
 .list-separator{
   height: 1px;
   border: 0px;
-  background-color: #333;
-  position: relative;top: -50px;
-  opacity: .15;
+  background-color: rgb(77, 75, 75);
+  position: relative;
+  
 }
 .list-separator2{
   height: 1px;

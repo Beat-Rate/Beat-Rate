@@ -76,7 +76,7 @@ export default class Home extends React.Component{
                 </div>
                 </center>
                 </div>
-                <MainCTA onClick={()=>{window.location.href = "/upload"}} buttonTitle="Upload Song"/>
+           
             </div>
 
         );
