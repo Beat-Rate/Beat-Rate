@@ -105,26 +105,35 @@
 
 .top-bar{
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: -30px;
+  left: 20px;
   width: 100%;
   background-color: #161b22;
 }
 
-.top-bar h4{
+.top-bar h3{
   margin-left: 10px;
-  color: gold;
+  color: rgb(116, 116, 116);
   margin-top: 30px;
+  font-size: 38px;
+  position: relative; top: -360px; left: 270px;
 }
 
 .top-bar #menu{
-  top: 10px;
+  top: 200px;
   right: 10px;
   position: absolute;
   width: 60px;
 }
 .top-bar h2 {
   color: #fff;
+}
+.top-bar h4{
+  color: rgb(116, 116, 116);
+  font-size: 78px;
+  position: relative;
+  top: -204px;
+  left: 234px;
 }
 
 .main-body{

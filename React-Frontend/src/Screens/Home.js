@@ -51,8 +51,8 @@ export default class Home extends React.Component{
         console.log(localStorageLeft())
         return(
             <div className="logged-in-container">
-                <AlertBox message={this.state.errorText}/>
-                <Upper pageTitle="Your Songs"/>
+                <AlertBox message={this.state.errorText} />
+                <Upper size ={this.state.songList.length}  pageTitle="Your Songs"/>
                 <br/>
                 <div className="main-body">
                 <center>
