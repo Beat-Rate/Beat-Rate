@@ -19,7 +19,7 @@ This application  helps artists gather tips/pointers to get better at their craf
 
 <h1> 
 
-<img width = "200px" src= "https://github.com/Beat-Rate/Beat-Rate/blob/master/React-Frontend/SampleGui/newgui.png"/>
+<img width = "400px" src= "https://github.com/Beat-Rate/Beat-Rate/blob/master/React-Frontend/SampleGui/newgui.png"/>
 
 </h1>
 
