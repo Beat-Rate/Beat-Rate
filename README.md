@@ -19,9 +19,7 @@ This application  helps artists gather tips/pointers to get better at their craf
 
 <h1> 
 
-<img width = "200px" src= "https://github.com/RonaldColyar/music-thing/blob/master/SampleGui/BudgetHub.png"/>
-<img width = "200px"  src = "https://github.com/RonaldColyar/music-thing/blob/master/SampleGui/MusicHub.png"/>
-<img width = "200px" src = "https://github.com/RonaldColyar/music-thing/blob/master/SampleGui/UploadHub.png"/>
+<img width = "200px" src= "https://github.com/Beat-Rate/Beat-Rate/blob/master/React-Frontend/SampleGui/newgui.png"/>
 
 </h1>
 
