@@ -116,7 +116,7 @@
   color: rgb(116, 116, 116);
   margin-top: 30px;
   font-size: 38px;
-  position: relative; top: -360px; left: 270px;
+  position: relative; top: -610px; left: 270px;
 }
 
 .top-bar #menu{
@@ -127,20 +127,23 @@
 }
 .top-bar h2 {
   color: #fff;
+  position: relative;
+  top: -250px;
 }
 .top-bar h4{
   color: rgb(116, 116, 116);
   font-size: 78px;
   position: relative;
-  top: -204px;
+  top: -454px;
   left: 234px;
 }
 
+
 .main-body{
   position: relative;
-  margin-top: 145px;
+  margin-top: 165px;
   overflow-y: auto;
-  height: 74%;
+  height: 75%;
 
   background-color: #242c38;
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.664);
@@ -370,7 +373,57 @@ button{
   position: relative;left: 20px;
   width: 400px;
 }
-.review-comp h3{
+#upload-topbar{
+background-color: #355C7D;
+position: relative;
+top: 120px;
+}
+#review-topbar{
+background-color: #725A7A;
+position: relative;
+top: 41px;
+left: 150px;
+}
+#wallet-topbar{
+background-color: #C56C86;
+position: relative;
+top: -40px;
+left: 300px;
+}
+.topbar-buttons{
+  width: 115px;
+  height: 80px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.705);
+
+}
+.topbar-buttons img{
+  width: 150px;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+.topbar-buttons h5{
+  color: #000000;
+}
+#wallet-topbar h5{
   position: relative; left: 20px;
-  opacity: 0.8;
+}
+#review-topbar h5{
+  position: relative;top: -27px; left: 10px;
+}
+#upload-topbar h5{
+  position: relative; top: -10px;left: 10px;
+}
+#wallet-topbar img{
+  position: relative; top: 20px;left: 28px;
+}
+#review-topbar img{
+  position: relative;left: 35px;
+}
+#upload-topbar img{
+  position: relative; left: 35px;top: 5px;
+}
+.topbar-buttons img{
+  width : 46px;
+
 }
