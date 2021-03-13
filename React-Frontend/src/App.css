@@ -430,15 +430,20 @@ left: 300px;
 
 }
 .uploadsong-container{
-  align-self: center;
+
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .upload-body{
   position: relative;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow-y: auto;
   height: 100vh;
-
+  
   background-color: #242c38;
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.664);
 }
@@ -456,7 +461,10 @@ left: 300px;
   align-items: center;
 }
 .upload-button-container{
-  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: #242c38;
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.664);
   height: 570px;
