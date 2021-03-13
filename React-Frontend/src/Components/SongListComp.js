@@ -12,7 +12,6 @@ export default class SongListComp extends React.Component{
         this.song_handler = new SongHandler(
             this.props.id,JSON.parse(localStorage.getItem("user")).uid);
         this.state = {
-            editing:false , 
             data :""
         };
     }
@@ -54,42 +53,36 @@ export default class SongListComp extends React.Component{
         if(this.props.is_paid == true){
             return(
                 <div className="list-component">
-                <b className = "b" style = {{opacity:(this.state.editing? 0:1)}}  >{this.props.songName}</b>  
+                <b className = "b"   >{this.props.songName}</b>  
 
                 <img 
                       
-                     className={this.state.editing? "confirm-button":"list-play-button" }
-                     src={ this.state.editing? ConfirmImage:PlayImage}/>
-                <img
-                    style = {{opacity:(this.state.editing? 1:0)}}  
-                    className = "cancel-button"
-                    src = {CancelImage}                    
-                >
-                </img>
+                     className="list-play-button" 
+                     src={PlayImage}/>
+          
 
                 <div  
                       className="list-controls">
 
-                    <button style = {{opacity:(this.state.editing? 0:1)}}  
-                         onClick = {()=>{this.setState({editing:true})}} 
+                    <button 
+                        
                         className="list-cta">Rename
                     </button> &nbsp; &nbsp; 
 
                     <button  
-                       style = {{opacity:(this.state.editing? 0:1)}}  
-                        onClick = {()=>{this.song_handler.placeInGlobal()}} 
+                     
+                        onClick = {()=>{this.removeSongFromFirebase()}} 
                         className="list-cta">Delete
                     </button>
                     <button
-                        style = {{opacity:(this.state.editing? 0:1)}}  
-                        onClick = {()=>{}}
+              
+                        
                         className= "list-cta"
                     >
                         View Reviews!
                     </button>
                     <input 
-                           className = "edit-input" 
-                           style = {{opacity:(this.state.editing? 1:0)}}  
+                           className = "edit-input"  
                            placeholder = "New Name" 
 
                           ></input>  
