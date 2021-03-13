@@ -181,10 +181,6 @@
   height: 160px;
   background-color: #161b22;
   border-radius: 15px;
-  position: relative;
-  right: 23%;
-  top: 50%;
-
 }
 
 .upload-song img{
@@ -430,30 +426,36 @@ left: 300px;
 
 }
 .uploadsong-container{
-
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width :100vw;
+  height : 100vh;
 }
 .upload-body{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-y: auto;
+  width: 100vw;
   height: 100vh;
-  
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  overflow-y: auto;
   background-color: #242c38;
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.664);
 }
 .upload-container{
+  width: 100vw;
+  height: 100vh;
   background-color: #242c38;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+}
+.upload-container label {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .upload-song{ 
   display: flex;
