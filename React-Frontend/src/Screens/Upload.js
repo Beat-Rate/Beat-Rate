@@ -137,23 +137,16 @@ export default class Upload extends React.Component{
         return(
             <div className="uploadsong-container">
                 <PlayModal image={this.state.image} onClose={()=>{this.hideModal()}} genreSelect={(event)=>{this.setGenre(event)}} onContinue={()=>{this.uploadSong()}} audioTitle={this.state.audioTitle}/>
-  
-                <br/>
                 
                 <div className="upload-body">
-                <center>
-                <div className="upload-container"><br/>
-                <input type="file" id="chosen-file" name="chosen-file" accept="audio/mp3" className="audio-selector" onChange={(event)=>{this.upload(event.target)}}/>
-
-                <label for="chosen-file" name="chosen-file">
-                <div class="upload-song">
-                <img src={upload} width="130px"/>
-                <br/><br/><br/>
-           
-                </div>
-                </label>
-                </div>
-                </center>
+                    <div className="upload-container">
+                        <input type="file" id="chosen-file" name="chosen-file" accept="audio/mp3" className="audio-selector" onChange={(event)=>{this.upload(event.target)}}/>
+                        <label for="chosen-file" name="chosen-file">
+                            <div class="upload-song">
+                                <img src={upload} width="130px"/>
+                            </div>
+                        </label>
+                    </div>
                 </div>
             </div>
 
