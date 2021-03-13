@@ -4,13 +4,6 @@
   <strong>Help music artists gather tips to get better at their craft🎨</strong>
 </p>
 
-##
-
-<h3 align="center">  
-  <a href="https://github.com/Beat-Rate/Beat-Rate/blob/master/Contributions.md">Contribute</a>
-</h3>
-
-<p align="center"><b>my-awesome-project-ebf03.web.app/</b></p>
 
 ---
 
