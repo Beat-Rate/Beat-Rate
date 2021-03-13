@@ -1,7 +1,7 @@
 
 <h1 align="center">Beat-Rated</h1>
 <p align="center">
-  <strong>Help music artists gather tips to get better at their craft🎨</strong>
+  <strong>Helping musicians gather tips which help them to get better at their craft🎨</strong>
 </p>
 
 
