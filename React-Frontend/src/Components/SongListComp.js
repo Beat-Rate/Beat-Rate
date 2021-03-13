@@ -1,8 +1,6 @@
 import React from "react";
 import "../App.css";
 import PlayImage from "../Components/Images/play-img.png";
-import CancelImage from "../Components/Images/cancel.png"
-import ConfirmImage from "../Components/Images/confirm.png"
 import SongHandler from "../SongHandler"
 
 export default class SongListComp extends React.Component{

@@ -1,11 +1,11 @@
 import React from 'react';
-import Upper from '../Components/Upper';
-import MainCTA from '../Components/MainCTA';
+
 import UploadIcon from '../Components/Images/upload.png';
 import PlayModal from '../Components/PlayModal';
 import firebase from 'firebase';
 import Loader from '../Components/Images/loader.gif';
 import Wave from "../Components/Images/wave.png";
+import upload  from '../Components/Images/upload-vector.png';
 import Complete from "../Components/Images/complete.gif";
 
 var playingAudio;
@@ -135,27 +135,26 @@ export default class Upload extends React.Component{
 
     render(){
         return(
-            <div className="logged-in-container">
+            <div className="uploadsong-container">
                 <PlayModal image={this.state.image} onClose={()=>{this.hideModal()}} genreSelect={(event)=>{this.setGenre(event)}} onContinue={()=>{this.uploadSong()}} audioTitle={this.state.audioTitle}/>
-                <Upper pageTitle="Upload Song"/>
+  
                 <br/>
                 
-                <div className="main-body">
+                <div className="upload-body">
                 <center>
-                <div className="songs-container"><br/>
+                <div className="upload-container"><br/>
                 <input type="file" id="chosen-file" name="chosen-file" accept="audio/mp3" className="audio-selector" onChange={(event)=>{this.upload(event.target)}}/>
 
                 <label for="chosen-file" name="chosen-file">
                 <div class="upload-song">
-                <img src={UploadIcon} width="130px"/>
+                <img src={upload} width="130px"/>
                 <br/><br/><br/>
-                <p><b>👆 tap to upload</b></p>
+           
                 </div>
                 </label>
                 </div>
                 </center>
                 </div>
-                <MainCTA buttonTitle="Continue"/>
             </div>
 
         );
