@@ -1,7 +1,7 @@
 
 <h1 align="center">Beat-Rated</h1>
 <p align="center">
-  <strong>Help music artists gather tips to get better at their craft🎨</strong>
+  <strong>The place where musicians get detailed reviews from normal consumers🎨</strong>
 </p>
 
 
