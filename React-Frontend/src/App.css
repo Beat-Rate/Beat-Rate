@@ -105,48 +105,51 @@
 
 .top-bar{
   position: relative;
-  top: 10%;
+  top:20%;
   left: 13%;
   width: 20%;
-  height: 10%;
+  height: 0%;
   
   background-color:#2a3950;
 }
 
-.top-bar h3{
-  margin-left: 10px;
+#my-songs-count{
+
   color: rgb(116, 116, 116);
-  margin-top: 30px;
+  
   font-size: 38px;
+  position: absolute; top: -72%;
+  left: 117%;
+  
 
 }
 
 
-.top-bar h2 {
+#my-songs-header  {
   color: #fff;
-  position: relative;
-  top: -250px;
+  position: absolute;
+  left: 10%;
+
 }
-.top-bar h4{
+#my-songs-separator{
   color: rgb(116, 116, 116);
   font-size: 78px;
+  
+
 
 }
 
 
 .main-body{
   position: relative;
-  top: 10%;
+  top: 16%;
   overflow-y: auto;
-  height: 70%;
+  height: 65%;
 
   background-color: #2a3950;
  
 }
 
-.main-cta{
-
-}
 
 .songs-container{
   height: 40%;
@@ -287,7 +290,8 @@ button{
   position: relative;
   right: -40%;
   top: 25%;
-  width: 52px;
+  width: 32px;
+  border-radius: 50%;
 }
 
 
@@ -356,11 +360,11 @@ left: 120%;
 background-color: #C56C86;
 position: absolute;
 top: 20%;
-left: 290%;
+left: 282%;
 }
 .topbar-buttons{
   width: 29vw;
-  height: 10vh;
+  height: 9vh;
   border-radius: 8px;
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.705);
   padding-bottom: 10%;
@@ -375,7 +379,7 @@ left: 290%;
   align-self: center;
 }
 #review-topbar h5{
-  position: relative;top: 50%; 
+  position: relative;top: -12px; 
   align-self: center;
 }
 #upload-topbar h5{

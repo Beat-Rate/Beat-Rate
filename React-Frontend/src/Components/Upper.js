@@ -8,7 +8,7 @@ export default class Upper extends React.Component{
     render(){
         return(
             <div className="top-bar">
-           
+       
             <TopBarButton  id = "upload-topbar"  label = "Upload Song!" image = {upload}/>
             <TopBarButton id = "review-topbar" label = "View Reviews!" image = {review}/>
             <TopBarButton  id = "wallet-topbar" label = "Add Funds!" image = {wallet}/>

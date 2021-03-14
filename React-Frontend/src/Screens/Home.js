@@ -52,8 +52,10 @@ export default class Home extends React.Component{
         return(
             <div className="logged-in-container">
                 <AlertBox message={this.state.errorText} />
+                <h2 id = "my-songs-header"> My Songs<h3 id = "my-songs-count">{this.state.songList.length}</h3></h2>
                 
-                <br/>
+
+
                 <div className="main-body">
                 <center>
                 <div className="songs-container"><br/>
@@ -78,7 +80,7 @@ export default class Home extends React.Component{
                 
                 </center>
                 </div>
-                <Upper size ={this.state.songList.length}  pageTitle="Your Songs"/>
+                <Upper  />
             </div>
 
         );
