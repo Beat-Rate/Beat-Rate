@@ -52,7 +52,7 @@ export default class Home extends React.Component{
         return(
             <div className="logged-in-container">
                 <AlertBox message={this.state.errorText} />
-                <Upper size ={this.state.songList.length}  pageTitle="Your Songs"/>
+                
                 <br/>
                 <div className="main-body">
                 <center>
@@ -73,10 +73,12 @@ export default class Home extends React.Component{
                 :
                 <p className="no-songs">Looks like you haven't uploaded any songs yet...</p>
                 }
+                 
                 </div>
+                
                 </center>
                 </div>
-           
+                <Upper size ={this.state.songList.length}  pageTitle="Your Songs"/>
             </div>
 
         );
