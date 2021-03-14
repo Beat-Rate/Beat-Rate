@@ -61,7 +61,7 @@ export default class Home extends React.Component{
                 this.state.songList.length > 0 ?
 
                 this.state.songList.map(thisSong=> {
-                    return (<SongListComp songName={this.truncate(thisSong.displayName, 35)} 
+                    return (<SongListComp songName={this.truncate(thisSong.displayName, 30)} 
                     key = {uuidv4()}
                     is_paid = {false}
                     id = {thisSong.key} 

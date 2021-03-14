@@ -85,8 +85,7 @@ export default class SongListComp extends React.Component{
 
                           ></input>  
                      
-                    <hr style = {{
-                        }} noshade className="list-separator"/>
+            
 
                 </div>
                
@@ -99,6 +98,7 @@ export default class SongListComp extends React.Component{
         else{
     
             return(
+                //window.location.replace("http://localhost:3000/budget/"+this.props.id)
                 <div className="list-component">
                     <b className = "b"  >{this.props.songName}</b>  
 
@@ -113,29 +113,13 @@ export default class SongListComp extends React.Component{
                     <div  
                           className="list-controls">
 
-                        <button 
-                             
-                            className="list-cta">Rename
-                        </button> &nbsp; &nbsp; 
-                        <button  
-                           
-                            onClick = {
-                                ()=>{this.removeSongFromFirebase()}} 
-                            className="list-cta">Delete
-                        </button>
-                        <button
-                         
-                            onClick = {
-                                        
-                                        ()=>{window.location.replace("http://localhost:3000/budget/"+this.props.id)}}
-                            className= "list-cta"
-                        >
-                            Pay For Reviews!
-                        </button>
-                    
-                         
-                        <hr style = {{
-                            }} noshade className="list-separator"/>
+                    <ul className = "song-options">
+
+                        <li className = "song-options-grey">Rename</li>
+                        <li className = "song-options-grey">Delete</li>
+                        <li className = "song-options-red">Pay</li>
+                    </ul>
+                  
 
                     </div>
                    
