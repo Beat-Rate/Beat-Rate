@@ -1,0 +1,59 @@
+.uploadsong-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width :100vw;
+    height : 100vh;
+  }
+  .upload-body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    overflow-y: auto;
+    background-color: #242c38;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.664);
+  }
+  .upload-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #242c38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .upload-container label {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .upload-song{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .upload-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: #242c38;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.664);
+    height: 570px;
+  }
+  
+  .upload-song{
+    width: 160px;
+    height: 160px;
+    background-color: #161b22;
+    border-radius: 15px;
+  }
+  
+  .upload-song img{
+    position: relative;
+    margin-top: 20px;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,.2));
+  }

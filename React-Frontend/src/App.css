@@ -8,81 +8,7 @@
   z-index: 0;
 }
 
-.topright-button{
-  width: 150px;
-  height: 48px;
-  border: 0px;
-  background-color: #fff;
-  border-radius: 9px;
-  box-shadow: 0px 0px 7px 0px rgba(0,0,0,.2);
-  position: absolute; 
-  top: 10px; 
-  right: 10px;
-  z-index: 1;
-  font-size: 1em;
-  font-weight: 800;
-}
 
-.text-body{
-  margin-top: 82px;
-  margin-left: 10px;
-}
-
-.text-body h2{
-  font-size: 2.15em;
-  margin-top: 0px;
-}
-
-.text-body p{
-  font-size: 1.1em;
-  max-width: 85%;
-  font-weight: 700;
-}
-
-.text-body small{
-  font-size: .8em;
-  max-width: 85%;
-  margin-top: 20px;
-}
-
-.bottom-form{
-  width: 100%;
-  background-color: #fff;
-  padding-top: 10px;
-  padding-bottom: 15px;
-  position: fixed;
-  bottom: 0px;
-  box-shadow: 0px -3px 7px 0px rgba(0,0,0,.125);
-}
-
-.default-input{
-  width: 77%;
-  height: 44px;
-  margin-top: 20px;
-  font-size: .9em;
-  font-weight: 700;
-  text-align: center;
-  border: 0px;
-  box-shadow: 0px 1px 7px 0px rgba(0,0,0,.155);
-  border-radius: 5px;
-}
-
-.pullup-minor{
-  margin-top: -30px;
-  margin-bottom: 10px;
-}
-
-.affirm-button{
-  width: 67%;
-  height: 44px;
-  border: 0px;
-  border-radius: 9px;
-  margin-top: 20px;
-  font-size: .9em;
-  font-weight: 700;
-  background-color: #80DDFF;
-  box-shadow: 0px 1px 7px 0px rgba(0,0,0,.155); 
-}
 
 ::placeholder{
   color: #333;
@@ -103,41 +29,9 @@
   margin-left: 10px;
 }
 
-.top-bar{
-  position: relative;
-  top:20%;
-  left: 13%;
-  width: 20%;
-  height: 0%;
-  
-  background-color:#2a3950;
-}
-
-#my-songs-count{
-
-  color: rgb(116, 116, 116);
-  
-  font-size: 38px;
-  position: absolute; top: -72%;
-  left: 117%;
-  
-
-}
 
 
-#my-songs-header  {
-  color: #fff;
-  position: absolute;
-  left: 10%;
 
-}
-#my-songs-separator{
-  color: rgb(116, 116, 116);
-  font-size: 78px;
-  
-
-
-}
 
 
 .main-body{
@@ -159,18 +53,7 @@
 
 
 
-.upload-song{
-  width: 160px;
-  height: 160px;
-  background-color: #161b22;
-  border-radius: 15px;
-}
 
-.upload-song img{
-  position: relative;
-  margin-top: 20px;
-  filter: drop-shadow(0px 2px 4px rgba(0,0,0,.2));
-}
 
 .audio-selector{
   display: none;
@@ -194,8 +77,7 @@
   opacity: 1;
   transition: .3s;
 }
-
-.play-modal, .alert-box{
+.alert-box{
   width: 80%;
   position: absolute;
   top: 30%;
@@ -205,19 +87,6 @@
   box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.753);
 }
 
-
-
-.play-modal p{
-  font-weight: 600;
-  color: #fff;
-}
-
-.play-modal img{
-  height: 50px;
-}
-.play-modal h3{
-  color: #fff;
-}
 .no-bg{
   background: rgba(180, 179, 179, 0);
   width: 50%;
@@ -242,204 +111,12 @@ button{
 
 
 
-.song-options {
-  list-style-type: none;
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-  float: left;
-  top: 53%;
-  right: 16%;
-  
-}
-
-.song-options li{
-  list-style-type: none;
- 
-  overflow: hidden;
-  display: inline;
-  position: relative;
-  padding: 6%;
-  font-size: .96em;
-}
-.song-options-grey{
-  text-decoration: underline;
-  color: #666;
-}
-.song-options-red{
-  text-decoration: underline;
-  color: #C56C86;
-}
-.list-component{
-  background-color: #101317;
-  height: 12vh;
-  width: 90%;
-  border-radius: 4px;
-  padding: 1%;
-  margin-bottom: 7%;
-}
-.list-component b {
-  color: #fff;
-  position: absolute;
-  left: 3%;
-  top: 7%;
-  font-size: .99em;
-
-}
-.list-component img{
-  position: relative;
-  right: -40%;
-  top: 25%;
-  width: 32px;
-  border-radius: 50%;
-}
 
 
 
-.overall-review{
-  height: 50%;
-  position: absolute; top: -30px;
-  width: 100%;
-  background-color: #ffffff
-}
-#overall-number{
-  font-size: 80px;
-  position: relative;left: 180px;
-}
+
 .no-margins{
   margin: 0px;
 }
-#based-on{
-  font-size: 30px;
-  position: relative;top: 70px;left: 110px;
-  opacity: 0.5;
-}
-#overall-label{
-  opacity: 0.5;
-  font-size: 30px;
-  position: relative;left: 140px;
-  top: 20px;
-}
-#review-emoji{
-  position: relative;left: 200px; top: -85px;
-}
-.review-list-container{
-  background-color:#fff ;
-  height: 519px;
-  margin: 0%;
-  padding-top: 1px;
-  position: relative;top: 400px;
-}
-.review-comp{
-  background-color: #f0f0f0;
-}
-.review-comp img{
-  position: relative; top: -10px; left: -20px;
-}
-.review-comp h1{
-  opacity: 0.8;
-  position: relative;left: 20px;
-}
-.review-comp p {
-  position: relative;left: 20px;
-  width: 400px;
-}
-#upload-topbar{
-background-color: #355C7D;
-position: absolute;
-top: 20%;
-left: -43%;
-}
-#review-topbar{
-background-color: #725A7A;
-position: absolute;
-top: 20%;
-left: 120%;
-}
-#wallet-topbar{
-background-color: #C56C86;
-position: absolute;
-top: 20%;
-left: 282%;
-}
-.topbar-buttons{
-  width: 29vw;
-  height: 9vh;
-  border-radius: 8px;
-  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.705);
-  padding-bottom: 10%;
 
-}
-
-.topbar-buttons h5{
-  color: #ffffff;
-}
-#wallet-topbar h5{
-  position: relative;
-  align-self: center;
-}
-#review-topbar h5{
-  position: relative;top: -12px; 
-  align-self: center;
-}
-#upload-topbar h5{
-  position: relative; top:  -10px;
-align-self: center;
-}
-
-.topbar-buttons img{
-  -webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222);
-  position: relative;
-  top: 10px;
-  width : 48px;
-  display:block;
-  margin:auto;
-}
-.uploadsong-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width :100vw;
-  height : 100vh;
-}
-.upload-body{
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content:center;
-  align-items:center;
-  overflow-y: auto;
-  background-color: #242c38;
-  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.664);
-}
-.upload-container{
-  width: 100vw;
-  height: 100vh;
-  background-color: #242c38;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.upload-container label {
-  width: 160px;
-  height: 160px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.upload-song{ 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.upload-button-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: #242c38;
-  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.664);
-  height: 570px;
-}
 

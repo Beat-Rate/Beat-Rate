@@ -1,12 +1,14 @@
 import React from 'react';
 
-import UploadIcon from '../Components/Images/upload.png';
+
 import PlayModal from '../Components/PlayModal';
 import firebase from 'firebase';
 import Loader from '../Components/Images/loader.gif';
 import Wave from "../Components/Images/wave.png";
 import upload  from '../Components/Images/upload-vector.png';
 import Complete from "../Components/Images/complete.gif";
+//css
+import "../Css/upload.css"
 
 var playingAudio;
 var { v4: uuidv4 } = require('uuid');

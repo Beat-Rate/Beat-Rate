@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+import '../Css/PlayModal.css';
 
 var genres = localStorage.getItem("genres")?.split("/");
 if(genres == null || genres == "null"){

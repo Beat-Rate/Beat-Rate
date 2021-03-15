@@ -1,0 +1,39 @@
+.play-modal{
+    width: 80%;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    background-color: #242c38;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.753);
+  }
+  
+  
+  
+  .play-modal p{
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  .play-modal img{
+    height: 50px;
+  }
+  .play-modal h3{
+    color: #fff;
+  }
+  .default-input{
+    width: 77%;
+    height: 44px;
+    margin-top: 20px;
+    font-size: .9em;
+    font-weight: 700;
+    text-align: center;
+    border: 0px;
+    box-shadow: 0px 1px 7px 0px rgba(0,0,0,.155);
+    border-radius: 5px;
+  }
+  
+  .pullup-minor{
+    margin-top: -30px;
+    margin-bottom: 10px;
+  }
