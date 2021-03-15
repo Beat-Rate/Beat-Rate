@@ -141,9 +141,9 @@ export default class Upload extends React.Component{
                 <div className="upload-body">
                     <div className="upload-container">
                         <input type="file" id="chosen-file" name="chosen-file" accept="audio/mp3" className="audio-selector" onChange={(event)=>{this.upload(event.target)}}/>
-                        <label for="chosen-file" name="chosen-file">
+                        <label  for="chosen-file" name="chosen-file">
                             <div class="upload-song">
-                                <img src={upload} width="130px"/>
+                                <img src={upload} width="430px"/>
                             </div>
                         </label>
                     </div>
