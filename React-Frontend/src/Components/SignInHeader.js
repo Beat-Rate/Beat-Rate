@@ -11,7 +11,7 @@ export default class SignInHeader extends React.Component {
     render() {
         return (
             <div id = "Header">
-                <button onClick = {this.toSignUp}>Sign Up</button>
+                <button onClick = {this.toSign}>Sign Up</button>
                 <h1>Beat Rate</h1>
         
 
