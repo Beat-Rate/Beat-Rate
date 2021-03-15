@@ -1,0 +1,28 @@
+.song-options {
+    list-style-type: none;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    float: left;
+    top: 53%;
+    right: 16%;
+    
+  }
+  
+  .song-options li{
+    list-style-type: none;
+   
+    overflow: hidden;
+    display: inline;
+    position: relative;
+    padding: 6%;
+    font-size: .96em;
+  }
+  .song-options-grey{
+    text-decoration: underline;
+    color: #666;
+  }
+  .song-options-red{
+    text-decoration: underline;
+    color: #C56C86;
+  }

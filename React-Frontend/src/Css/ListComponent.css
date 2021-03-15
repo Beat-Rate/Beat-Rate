@@ -1,0 +1,31 @@
+
+.list-component{
+    background-color: #101317;
+    height: 12vh;
+    width: 90%;
+    border-radius: 4px;
+    padding: 1%;
+    margin-bottom: 7%;
+  }
+  .list-component b {
+    color: #fff;
+    position: absolute;
+    left: 3%;
+    top: 7%;
+    font-size: .99em;
+  
+  }
+  .list-component img{
+    position: relative;
+    right: -40%;
+    top: 25%;
+    width: 32px;
+    border-radius: 50%;
+  }
+  .songs-container{
+    height: 40%;
+   
+    border-radius: 6px;
+  }
+  
+  

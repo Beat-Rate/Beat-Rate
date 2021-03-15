@@ -5,6 +5,11 @@ import AlertBox from '../Components/AlertBox';
 import firebase from 'firebase/app';
 import SongListComp from '../Components/SongListComp';
 import localStorageLeft from '../Components/StorageCalculator'
+//css
+import "../Css/BottomBar.css";
+import "../Css/mySongsHeader.css";
+import "../Css/SongOptions.css";
+import "../Css/ListComponent.css"
 var { v4: uuidv4 } = require('uuid');
 export default class Home extends React.Component{
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import OverallReview from '../Components/OverallReview'
+import "../Css/review.css"
 import ReviewListComp from '../Components/ReviewListComp'
 // map reviews to reviewlistcomp
 export default class ViewReviews extends React.Component {
