@@ -4,7 +4,7 @@ import SignIn from './Screens/SignIn';
 import Home from './Screens/Home';
 import Upload from './Screens/Upload';
 import Budget from './Screens/Budget';
-import Desktop from './Screens/Desktop';
+
 import ViewReviews from './Screens/ViewReviews';
 
 export var loggedInRoutes =
@@ -42,11 +42,3 @@ export var loggedOutRoutes =
   </Switch>
 </Router>;
 
-export var bigScreenRoute = 
-<Router>
-  <Switch>
-    <Route exact path="/desktop">
-  <Desktop/>
-</Route>
-</Switch>
-</Router>;
