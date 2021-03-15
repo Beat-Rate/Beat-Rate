@@ -1,7 +1,8 @@
 import React from 'react';
-import '../App.css';
+import '../Css/BottomForm.css';
 import AlertBox from '../Components/AlertBox';
 import firebase from 'firebase/app';
+
 var firebaseConfig = {
     apiKey: "AIzaSyA8pLz0it3fsyGDM897C-5d447BsbQQyWA",
     authDomain: "my-awesome-project-ebf03.firebaseapp.com",
@@ -79,11 +80,11 @@ export default class BottomForm extends React.Component{
 
     render(){
         return(
-            <div className="bottom-form">
+            <div id="bottom-form">
                 <AlertBox/>
                 <center>
-                <input className="default-input" type="number" onInput={(event)=>{this.setState({cell: event.target.value})}} placeholder="Mobile Number"/><br/>
-                <input className="default-input" type="password" placeholder="Password (Minimum 6 Char)" onInput={(event)=>{this.setState({pass: event.target.value})}}/><br/>
+                <input className="signup-input" type="number" onInput={(event)=>{this.setState({cell: event.target.value})}} placeholder="Mobile Number"/><br/>
+                <input className="signup-input" type="password" placeholder="Password " onInput={(event)=>{this.setState({pass: event.target.value})}}/><br/>
                 <button className="affirm-button" onClick={()=>this.loginOrCreateAccount()}>{this.state.text}</button>
                 </center>
             </div>
