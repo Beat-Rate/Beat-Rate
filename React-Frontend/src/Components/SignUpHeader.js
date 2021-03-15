@@ -1,10 +1,16 @@
 import React from 'react'
 
 export default class SignUpHeader extends React.Component {
+
+    toSignIn(){
+        window.location.href="/signin"
+    }
+
+
     render() {
         return (
             <div id = "Header">
-                <button>Login</button>
+                <button onClick = {this.toSignIn}>Login</button>
                 <h1>Beat Rate</h1>
                 <p id = "summary">
                 Get unfiltered , honest reviews in 

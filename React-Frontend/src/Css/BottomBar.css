@@ -40,13 +40,14 @@
     #wallet-topbar h5{
       position: relative;
       align-self: center;
+      top: -20px;
     }
     #review-topbar h5{
-      position: relative;top: -12px; 
+      position: relative;top: -18px; 
       align-self: center;
     }
     #upload-topbar h5{
-      position: relative; top:  -10px;
+      position: relative; top:  -25px;
     align-self: center;
     }
     
@@ -54,8 +55,11 @@
       -webkit-filter: drop-shadow(5px 5px 5px #222);
       filter: drop-shadow(5px 5px 5px #222);
       position: relative;
-      top: 10px;
+      top: 0px;
       width : 48px;
       display:block;
       margin:auto;
+    }
+    #review-topbar img{
+      width: 40px;
     }

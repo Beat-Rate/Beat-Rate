@@ -29,7 +29,9 @@
     font-size: large;
     font-weight: bold;
 }
-
+.bottom-form{
+ color: #fff;
+}
 #terms{
     color: rgb(165, 165, 165);
     font-size: medium;

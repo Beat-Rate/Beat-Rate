@@ -1,5 +1,7 @@
 import React from 'react';
-import '../App.css';
+
+import BottomForm from '../Components/BottomForm';
+import SignInHeader from '../Components/SignInHeader';
 import '../Css/Signin.css'
 
 export default class SignIn extends React.Component{
@@ -9,10 +11,12 @@ export default class SignIn extends React.Component{
 
     render(){
         return(
-            
-           <h1>
-
-           </h1>
+            <>
+            <center>
+           <SignInHeader/>
+           <BottomForm/>
+           </center>
+           </>
         );
     }
 }
