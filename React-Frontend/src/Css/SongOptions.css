@@ -4,25 +4,25 @@
     position: absolute;
     width: 100%;
     float: left;
-    top: 53%;
-    right: 16%;
+    top: 34%;
+    right: 12%;
     
   }
   
   .song-options li{
     list-style-type: none;
-   
+    
     overflow: hidden;
     display: inline;
     position: relative;
-    padding: 6%;
-    font-size: .96em;
+    padding: 3%;
+    font-size: 1em;
   }
   .song-options-grey{
-    text-decoration: underline;
+    text-decoration: none;
     color: #666;
   }
   .song-options-red{
-    text-decoration: underline;
+    text-decoration: none;
     color: #C56C86;
   }

@@ -1,18 +1,20 @@
 
 .list-component{
     background-color: #101317;
-    height: 12vh;
-    width: 90%;
+    width: 97%;
+    height: 100%;
     border-radius: 4px;
     padding: 1%;
     margin-bottom: 7%;
+    position: relative;
+    
   }
   .list-component b {
     color: #fff;
     position: absolute;
     left: 3%;
     top: 7%;
-    font-size: .99em;
+    font-size: 1.15em;
   
   }
   .songs-container p{
@@ -24,8 +26,8 @@
   .list-component img{
     position: relative;
     right: -40%;
-    top: 25%;
-    width: 32px;
+    top: 22%;
+    width: 56px;
     border-radius: 50%;
   }
   .songs-container{

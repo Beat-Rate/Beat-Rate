@@ -21,7 +21,7 @@ export default class TopBarButton extends React.Component {
             >
                 <center>
                 <img  src = {this.props.image}></img>
-                <h5 >{this.props.label}</h5>
+          
                 </center>
             </div>
         )
