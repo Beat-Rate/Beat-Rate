@@ -51,8 +51,14 @@ export default class Home extends React.Component{
        this.gatherData()
     }
     
-    truncate(str, n){
-        return (str.length > n) ? str.substr(0, n-1) + "..." : str;
+    truncate(str){
+         if(window.screen.width>800){
+            return (str.length > 78) ? str.substr(0, 77) + ".." : str;
+         } 
+         else{
+             return  (str.length > 28) ? str.substr(0, 27) + ".." : str;
+         }
+        
       };
 
     render(){
@@ -72,7 +78,8 @@ export default class Home extends React.Component{
                             this.state.songList.length > 0 ?
 
                             this.state.songList.map(thisSong=> {
-                                return (<SongListComp songName={this.truncate(thisSong.displayName, 30)} 
+                                return (<SongListComp songName={
+                                    this.truncate(thisSong.displayName)} 
                                 key = {uuidv4()}
                                 is_paid = {false}
                                 id = {thisSong.key} 

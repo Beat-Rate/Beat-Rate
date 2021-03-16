@@ -54,12 +54,16 @@
     .topbar-buttons img{
       -webkit-filter: drop-shadow(5px 5px 5px #222);
       filter: drop-shadow(5px 5px 5px #222);
-      position: relative;
-      top: 0px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
       width : 48px;
       display:block;
       margin:auto;
     }
+    
     #review-topbar img{
       width: 40px;
     }

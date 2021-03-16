@@ -123,7 +123,7 @@ export default class SongListComp extends React.Component{
                         }}
                         >Rename</li>
                         <li className = "song-options-grey">Delete</li>
-                        <li className = "song-options-red">Pay</li>
+                        <li className = "song-options-red">Get Reviews</li>
                     </ul>
                   
 
