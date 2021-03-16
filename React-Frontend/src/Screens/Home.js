@@ -10,6 +10,7 @@ import "../Css/BottomBar.css";
 import "../Css/mySongsHeader.css";
 import "../Css/SongOptions.css";
 import "../Css/ListComponent.css"
+import RenamePopup from '../Components/RenamePopup';
 var { v4: uuidv4 } = require('uuid');
 export default class Home extends React.Component{
 
@@ -18,7 +19,9 @@ export default class Home extends React.Component{
         this.state = {
             songs: [],
             errorText: '',
-            songList: []
+            songList: [],
+            rename_displayed : false,
+            current_song_handler : null
         }
         this.setState = this.setState.bind(this);
     }
@@ -62,30 +65,36 @@ export default class Home extends React.Component{
 
 
                 <div className="main-body">
-                <center>
-                <div className="songs-container"><br/>
-                {
-                this.state.songList.length > 0 ?
+                    <center>
+                        <div className="songs-container">
+                            <br/>
+                            {
+                            this.state.songList.length > 0 ?
 
-                this.state.songList.map(thisSong=> {
-                    return (<SongListComp songName={this.truncate(thisSong.displayName, 30)} 
-                    key = {uuidv4()}
-                    is_paid = {false}
-                    id = {thisSong.key} 
-                    update = {()=>{this.gatherData()}}
-                    setparentstate = {this.setState}
-                    songList  = {this.state.songList}
-                    removeSong = {this.removeSong}/>);
-                })
-                :
-                <p className="no-songs">Looks like you haven't uploaded any songs yet...</p>
-                }
-                 
-                </div>
-                
-                </center>
+                            this.state.songList.map(thisSong=> {
+                                return (<SongListComp songName={this.truncate(thisSong.displayName, 30)} 
+                                key = {uuidv4()}
+                                is_paid = {false}
+                                id = {thisSong.key} 
+                                update = {()=>{this.gatherData()}}
+                                setparentstate = {this.setState}
+                                songList  = {this.state.songList}
+                                />);
+                            })
+                            :
+                            <p className="no-songs">Looks like you haven't uploaded any songs yet...</p>
+                            }
+                        
+                        </div>
+                    
+                    </center>
                 </div>
                 <Upper  />
+                <RenamePopup display_state = {this.state.rename_displayed}
+                             current_song = {this.state.current_song_handler}
+                             setparentstate = {this.setState}
+                             />
+                
             </div>
 
         );
