@@ -1,0 +1,51 @@
+#rename-blur{
+    position: absolute;
+    z-index: 1000;
+    width: 80%;
+    height: 28%;
+    border-radius: 12px;
+    top: 30%;
+    left: 11%;
+    backdrop-filter: blur(5px);
+    background-color:#000000bc ;
+}
+#newNameInput{
+    border: 2px solid #FF7582;
+    background-color:#000000bc ;
+    color: #fff;
+    height: 5vh;
+    width: 60vw;
+    display: block;
+    position: relative;
+    left: 10%;
+    font-size: 1.2em;
+    padding-left: 5px;
+
+}
+#RenamePopupButtons button{
+    color: #fff;
+    border: none;
+    position: relative;
+    left: 8%;
+    top: 27px;
+    background-color: #FF7582;
+    font-weight: bold;
+    font-size: 110%;
+    width: 26%;
+    margin-left: 10%;
+    height: 4vh;
+
+    border-radius: 8px;
+
+
+}
+#newNameInput::placeholder{
+    color: #fff;
+    
+}
+#RenamePopup h1{
+    color: #fff;
+    position: relative;
+    left: 10%;
+    
+}

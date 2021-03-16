@@ -115,7 +115,13 @@ export default class SongListComp extends React.Component{
 
                     <ul className = "song-options">
 
-                        <li className = "song-options-grey">Rename</li>
+                        <li className = "song-options-grey" 
+                        onClick = {()=>{
+                            this.props.setparentstate({rename_displayed:true,
+                                current_song_handler: this.song_handler})
+
+                        }}
+                        >Rename</li>
                         <li className = "song-options-grey">Delete</li>
                         <li className = "song-options-red">Pay</li>
                     </ul>
