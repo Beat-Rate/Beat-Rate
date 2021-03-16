@@ -122,8 +122,8 @@ export default class SongListComp extends React.Component{
 
                         }}
                         >Rename</li>
-                        <li className = "song-options-grey">Delete</li>
-                        <li className = "song-options-red">Get Reviews</li>
+                        <li className = "song-options-grey" onClick = {()=>{this.removeSongFromFirebase()}}>Delete</li>
+                        <li className = "song-options-red" >Get Reviews</li>
                     </ul>
                   
 
