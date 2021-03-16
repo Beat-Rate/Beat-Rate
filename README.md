@@ -1,5 +1,5 @@
 
-<h1 align="center">Beat-Rated</h1>
+<h1 align="center">Beat-Rate</h1>
 <p align="center">
   <strong>The place where musicians get detailed reviews from normal consumers🎨</strong>
 </p>
