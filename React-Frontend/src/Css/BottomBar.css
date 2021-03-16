@@ -1,7 +1,7 @@
 .top-bar{
     position: relative;
     top:20%;
-    left: 13%;
+    left: 11%;
     width: 20%;
     height: 0%;
     
@@ -34,22 +34,7 @@
     
     }
     
-    .topbar-buttons h5{
-      color: #ffffff;
-    }
-    #wallet-topbar h5{
-      position: relative;
-      align-self: center;
-      top: -20px;
-    }
-    #review-topbar h5{
-      position: relative;top: -18px; 
-      align-self: center;
-    }
-    #upload-topbar h5{
-      position: relative; top:  -25px;
-    align-self: center;
-    }
+
     
     .topbar-buttons img{
       -webkit-filter: drop-shadow(5px 5px 5px #222);
@@ -59,11 +44,8 @@
       left: 50%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      width : 48px;
+      width : 128px;
       display:block;
       margin:auto;
     }
     
-    #review-topbar img{
-      width: 40px;
-    }
