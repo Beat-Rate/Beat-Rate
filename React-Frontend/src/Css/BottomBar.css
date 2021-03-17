@@ -1,7 +1,7 @@
 .top-bar{
     position: relative;
     top:20%;
-    left: 11%;
+    left: 13%;
     width: 20%;
     height: 0%;
     
@@ -43,7 +43,7 @@
       left: 50%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      width : 128px;
+      width : 18vh;
       display:block;
       margin:auto;
     }

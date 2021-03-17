@@ -19,12 +19,14 @@
   }
   .songs-container p{
     color: #fff;
+    top: 120px;
     font-size: large;
     position: relative;
     
   }
   .list-component img{
     position: relative;
+    border: 5px dotted  #C56C86;
     right: -40%;
     top: 22%;
     width: 48px;

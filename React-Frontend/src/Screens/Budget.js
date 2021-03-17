@@ -15,7 +15,7 @@ render(){
 
     return(
     <div className="logged-in-container">
-    <Upper pageTitle="Set Budget"/>
+
     <br/>
     </div>
     );
