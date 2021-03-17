@@ -1,0 +1,10 @@
+#select-song-blur{
+    backdrop-filter: blur(5px);
+    background-color:#000000bc ;
+    position: absolute;
+    width: 92%;
+    height: 92%;
+    left: 4%;
+    top: 6%;
+    
+}
