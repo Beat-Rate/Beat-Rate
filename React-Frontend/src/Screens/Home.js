@@ -37,7 +37,7 @@ export default class Home extends React.Component{
             let arr = []
             var songList = data.val();
             if(songList == null || songList == 'null'){
-                //leave empty
+                this.setState({songList:[]})
             }else{
             for(var key in songList){
                 //sets key of the object
