@@ -1,6 +1,6 @@
 import React from 'react';
 import Upper from '../Components/Upper';
-import MainCTA from '../Components/MainCTA';
+
 import AlertBox from '../Components/AlertBox';
 import firebase from 'firebase/app';
 import SongListComp from '../Components/SongListComp';
@@ -17,7 +17,6 @@ export default class Home extends React.Component{
     constructor(){
         super();
         this.state = {
-
             errorText: '',
             songList: [],
             rename_displayed : false,
@@ -31,7 +30,6 @@ export default class Home extends React.Component{
         document.getElementsByClassName("alert-parent-hidden")[0].classList.toggle("alert-parent");
     }
     gatherData(){
-       
         var thisUser = JSON.parse(localStorage.getItem("user")).uid;
         firebase.database().ref("Users/"+thisUser+"/Songs").on("value", data => {
             let arr = []
@@ -85,7 +83,7 @@ export default class Home extends React.Component{
                                 return (<SongListComp songName={
                                     this.truncate(thisSong.displayName)} 
                                 key = {uuidv4()}
-                                is_paid = {false}
+                                is_paid = {true}
                                 id = {thisSong.key} 
                                 setparentstate = {this.setState}
       

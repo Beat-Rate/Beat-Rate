@@ -5,7 +5,7 @@
 #my-songs-count{
 
     color: rgb(116, 116, 116);
-    
+
     font-size: 38px;
     position: absolute; top: -72%;
     left: 117%;
@@ -17,6 +17,7 @@
   #my-songs-header  {
     color: #fff;
     position: absolute;
+ 
     left: 10%;
   
   }

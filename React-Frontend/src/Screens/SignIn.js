@@ -12,10 +12,10 @@ export default class SignIn extends React.Component{
     render(){
         return(
             <>
-            <center>
-           <SignInHeader/>
-           <BottomForm/>
-           </center>
+                <center>
+                    <SignInHeader/>
+                    <BottomForm/>
+                </center>
            </>
         );
     }

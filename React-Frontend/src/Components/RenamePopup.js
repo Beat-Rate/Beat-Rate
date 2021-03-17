@@ -12,7 +12,7 @@ export default class RenamePopup extends React.Component {
         //song handler
       
         this.props.current_song.changeDisplayName(this.state.text,()=>{
-         
+            this.props.setparentstate({rename_displayed:false})
         });
     }
 

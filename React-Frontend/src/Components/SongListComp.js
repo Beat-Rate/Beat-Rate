@@ -47,44 +47,36 @@ export default class SongListComp extends React.Component{
         if(this.props.is_paid == true){
             return(
                 <div className="list-component">
-                <b className = "b"   >{this.props.songName}</b>  
+                <b className = "b"  >{this.props.songName}</b>  
 
                 <img 
                       
-                     className="list-play-button" 
-                     src={PlayImage}/>
-          
+                     className={"list-play-button" }
+                     src={PlayImage}
+                     />
+                     
+            
 
                 <div  
                       className="list-controls">
 
-                    <button 
-                        
-                        className="list-cta">Rename
-                    </button> &nbsp; &nbsp; 
+                <ul className = "song-options">
 
-                    <button  
-                     
-                        onClick = {()=>{this.removeSongFromFirebase()}} 
-                        className="list-cta">Delete
-                    </button>
-                    <button
+                    <li className = "song-options-grey" 
+                    onClick = {()=>{
+                        this.props.setparentstate({rename_displayed:true,
+                            current_song_handler: this.song_handler})
+
+                    }}
+                    >Rename</li>
+                    <li className = "song-options-grey" onClick = {()=>{this.removeSongFromFirebase()}}>Delete</li>
+                    <li className = "song-options-red" >Increase </li>
+                </ul>
               
-                        
-                        className= "list-cta"
-                    >
-                        View Reviews!
-                    </button>
-                    <input 
-                           className = "edit-input"  
-                           placeholder = "New Name" 
-
-                          ></input>  
-                     
-            
 
                 </div>
                
+
             </div>
         );
 
