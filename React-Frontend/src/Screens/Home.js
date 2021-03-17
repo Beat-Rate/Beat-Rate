@@ -17,7 +17,7 @@ export default class Home extends React.Component{
     constructor(){
         super();
         this.state = {
-            songs: [],
+
             errorText: '',
             songList: [],
             rename_displayed : false,
@@ -31,9 +31,10 @@ export default class Home extends React.Component{
         document.getElementsByClassName("alert-parent-hidden")[0].classList.toggle("alert-parent");
     }
     gatherData(){
+       
         var thisUser = JSON.parse(localStorage.getItem("user")).uid;
-        let arr = []
         firebase.database().ref("Users/"+thisUser+"/Songs").on("value", data => {
+            let arr = []
             var songList = data.val();
             if(songList == null || songList == 'null'){
                 //leave empty
@@ -48,7 +49,9 @@ export default class Home extends React.Component{
         })
     }
     componentDidMount(){
-       this.gatherData()
+       this.gatherData();
+       console.log("ok");
+
     }
     
     truncate(str){
@@ -62,7 +65,7 @@ export default class Home extends React.Component{
       };
 
     render(){
-        console.log(localStorageLeft())
+
         return(
             <div className="logged-in-container">
                 <AlertBox message={this.state.errorText} />
@@ -75,6 +78,7 @@ export default class Home extends React.Component{
                         <div className="songs-container">
                             <br/>
                             {
+                             
                             this.state.songList.length > 0 ?
 
                             this.state.songList.map(thisSong=> {
@@ -83,9 +87,9 @@ export default class Home extends React.Component{
                                 key = {uuidv4()}
                                 is_paid = {false}
                                 id = {thisSong.key} 
-                                update = {()=>{this.gatherData()}}
                                 setparentstate = {this.setState}
-                                songList  = {this.state.songList}
+      
+                               
                                 />);
                             })
                             :
@@ -100,6 +104,7 @@ export default class Home extends React.Component{
                 <RenamePopup display_state = {this.state.rename_displayed}
                              current_song = {this.state.current_song_handler}
                              setparentstate = {this.setState}
+                             size = {this.state.songList.length}
                              />
                 
             </div>

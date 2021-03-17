@@ -12,7 +12,7 @@ export default class SongHandler{
     }
     changeDisplayName( newName  , fun){
             let updates = {displayName : newName};
-            this.reference.update(updates, error=>{
+            this.reference.set(updates, error=>{
                 if (error){
 
                 }
@@ -21,6 +21,8 @@ export default class SongHandler{
                 }
             })
     }
+
+    
     setBudget(number){
         let updates = {budget: number}
         this.reference.update(updates)
