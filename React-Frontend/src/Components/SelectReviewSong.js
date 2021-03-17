@@ -1,5 +1,7 @@
-import React from 'react'
-import musicSymbol from "../Components/Images/song-vector.png"
+import React from 'react';
+import orangedot from '../Components/Images/orangedot.png';
+import pinkdot from '../Components/Images/pinkdot.png';
+import purpledot from '../Components/Images/purpledot.png';
 export default class SelectReviewSong extends React.Component {
     render() {
         return (
@@ -9,8 +11,10 @@ export default class SelectReviewSong extends React.Component {
                         this.props.songList.map(song=>{
                             return (
 
-                                <div id = "reiew-song">
-                                    <h1>Song Name<img src = {musicSymbol}></img>  </h1>
+                                <div className = "review-song">
+                                    <h1>Song Name </h1>
+                                    <h1><img></img></h1>
+
                                     
 
 

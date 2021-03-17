@@ -11,6 +11,7 @@ import "../Css/mySongsHeader.css";
 import "../Css/SongOptions.css";
 import "../Css/ListComponent.css"
 import RenamePopup from '../Components/RenamePopup';
+import SelectReviewSong from '../Components/SelectReviewSong';
 var { v4: uuidv4 } = require('uuid');
 export default class Home extends React.Component{
 
@@ -32,14 +33,14 @@ export default class Home extends React.Component{
     gatherData(){
         var thisUser = JSON.parse(localStorage.getItem("user")).uid;
         firebase.database().ref("Users/"+thisUser+"/Songs").on("value", data => {
-            let arr = []
+            let arr = [];
             var songList = data.val();
             if(songList == null || songList == 'null'){
-                this.setState({songList:[]})
+                this.setState({songList:[]});
             }else{
             for(var key in songList){
                 //sets key of the object
-                songList[key].key = key
+                songList[key].key = key;
                 arr.push(songList[key]);
             }
             this.setState({songList: arr});
@@ -68,17 +69,11 @@ export default class Home extends React.Component{
             <div className="logged-in-container">
                 <AlertBox message={this.state.errorText} />
                 <h2 id = "my-songs-header"> My Songs<h3 id = "my-songs-count">{this.state.songList.length}</h3></h2>
-                
-
-
                 <div className="main-body">
                     <center>
                         <div className="songs-container">
-                            <br/>
                             {
-                             
                             this.state.songList.length > 0 ?
-
                             this.state.songList.map(thisSong=> {
                                 return (<SongListComp songName={
                                     this.truncate(thisSong.displayName)} 
@@ -86,8 +81,6 @@ export default class Home extends React.Component{
                                 is_paid = {true}
                                 id = {thisSong.key} 
                                 setparentstate = {this.setState}
-      
-                               
                                 />);
                             })
                             :
@@ -95,7 +88,6 @@ export default class Home extends React.Component{
                             }
                         
                         </div>
-                    
                     </center>
                 </div>
                 <Upper  />
@@ -104,6 +96,7 @@ export default class Home extends React.Component{
                              setparentstate = {this.setState}
                              size = {this.state.songList.length}
                              />
+                <SelectReviewSong songList = {this.state.songList}/>
                 
             </div>
 
