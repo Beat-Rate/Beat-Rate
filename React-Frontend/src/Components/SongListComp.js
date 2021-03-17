@@ -18,19 +18,15 @@ export default class SongListComp extends React.Component{
             if(error){
             }
             else{
-                this.removeSongFromParentList();
-                this.props.update();
+                //
+             
             }
         })
     }
     //setting list empty because firebase re-renders
-    removeSongFromParentList(){
-        this.props.setparentstate({songList :[]});
-    }
+
     ChangeName(){
-        this.song_handler.changeDisplayName(this.state.data,()=>{
-            this.removeSongFromParentList();
-            this.props.update();
+        this.song_handler.changeDisplayName(this.state.data,()=>{  
             this.state.editing =false;
         } )
     }
@@ -122,8 +118,8 @@ export default class SongListComp extends React.Component{
 
                         }}
                         >Rename</li>
-                        <li className = "song-options-grey">Delete</li>
-                        <li className = "song-options-red">Get Reviews</li>
+                        <li className = "song-options-grey" onClick = {()=>{this.removeSongFromFirebase()}}>Delete</li>
+                        <li className = "song-options-red" >Get Reviews</li>
                     </ul>
                   
 
