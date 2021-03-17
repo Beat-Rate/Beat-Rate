@@ -49,8 +49,7 @@ export default class Home extends React.Component{
     }
     componentDidMount(){
        this.gatherData();
-       console.log("ok");
-
+  
     }
     
     truncate(str){

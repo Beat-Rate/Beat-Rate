@@ -1,7 +1,8 @@
 import React from 'react';
 import orangedot from '../Components/Images/orangedot.png';
 import pinkdot from '../Components/Images/pinkdot.png';
-import purpledot from '../Components/Images/purpledot.png';
+import bluedot from '../Components/Images/bluedot.png';
+import logo from '../Components/Images/logowithnobg.png'
 import '../Css/SelectReviewSong.css'
 export default class SelectReviewSong extends React.Component {
 
@@ -9,9 +10,7 @@ export default class SelectReviewSong extends React.Component {
 
     constructor(){
         super();
-        this.state = {
-            reviews_present :false
-        }
+     
     }
     render() {
 
@@ -32,31 +31,35 @@ export default class SelectReviewSong extends React.Component {
             }
             else{
                 return(
-                <div id = "select-song-blur">
+                <div  id = "select-song-blur" style = {{display : "none"}}>
+                    
+                        
+                            <img id ="logo" src = {logo}></img>
+                  
                     <div id = "review-song-container">
-                    <h1 style = {{display:(this.state.reviews_present? "none":"block")}}> No Reviews!!</h1>
+                
                         {
                             this.props.songList.map(song=>{
                   
                                     if(song.reviews != null){
-                                        if(this.state.reviews_present == false){
-                                            this.setState({reviews_present : true});
-                                        }
+                                        
                                         return(
                                             <div className = "review-song">
-                                                <h1>Song Name </h1>
-                                                <h1>
+                                                <h1 className = "song-name">Song Name </h1>
+                                                <h1 className = "stats">
                                                     <img src = {orangedot}></img>
-                                                    Completed Reviews {}
+                                                   6 Completed Reviews {}
                                                 </h1>
-                                                <h1>
+                                                <h1 className = "stats">
                                                     <img src = {pinkdot} ></img>
-                                                    Reviews left {}
+                                                   6 Reviews left {}
                                                 </h1>
-                                                <h1>
-                                                    <img src = {purpledot} ></img>
-                                                    status {}
+                                                <h1 className = "stats">
+                                                    <img src = {bluedot} ></img>
+                                                   Status : Active {}
                                                 </h1>
+                                               
+                                                
                                             </div>
                                         );
                                     }    
@@ -65,6 +68,7 @@ export default class SelectReviewSong extends React.Component {
                         }    
                         
                     </div>                
+                    <button id = "close-review-select">Close</button>
                 </div>
                 );
                 }

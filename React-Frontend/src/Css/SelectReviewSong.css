@@ -6,5 +6,74 @@
     height: 92%;
     left: 4%;
     top: 6%;
+    z-index: 1001;
+    border-radius: 12px;
     
+}
+#close-review-select{
+    color: #fff;
+    border: none;
+    background-color: #725A7A;
+    font-weight: bold;
+    font-size: 110%;
+    width: 46%;
+    height: 6vh;
+    border-radius:12px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 4%;
+    left: 27%;
+}
+
+#review-song-container{
+    backdrop-filter: blur(5px);
+    background-color:#725a7a32 ;
+    height: 75%;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    top: 10%;   
+    width: 100%;
+    
+}
+.review-song{
+    padding-left: 5%;
+    width: 110%;
+    backdrop-filter: blur(5px);
+    background-color:#000000bc ;
+    padding-bottom: 5%;
+
+}
+.review-song:hover{
+    background-color: rgba(0, 0, 0, 0.438);
+}
+.review-song img{
+    width: 2.0vw;
+    border-radius: 50%;
+    margin-right:  3%;
+
+
+}
+.stats{
+    font-size: 2.0vw;
+    color: #fff;
+}
+.song-name{
+    color: #fff;
+}
+.seperator{
+    margin-top: 5%;
+    opacity: .4;
+}
+#logo{
+ width: 23vh;   
+ position: absolute;
+ -ms-transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
+ top: 5%;
+ left: 50%;
+ z-index: 1001;
+ margin:auto;
+ display:block;
+ opacity: .8;
 }
