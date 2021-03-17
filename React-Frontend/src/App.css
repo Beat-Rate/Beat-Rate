@@ -36,10 +36,10 @@
 
 .main-body{
   position: relative;
-  top: 16%;
+  
   overflow-y: auto;
   height: 65%;
-
+  top: 6%;
   background-color: #2a3950;
  
 }

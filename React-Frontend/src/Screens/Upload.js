@@ -108,7 +108,7 @@ export default class Upload extends React.Component{
             if(e.lengthComputable){
                 console.log(e.loaded, e.total);
             }else{
-                console.log("can't compute")
+                console.log("can't compute");
             }
         }
 

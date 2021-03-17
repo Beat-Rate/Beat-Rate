@@ -5,10 +5,13 @@
 #my-songs-count{
 
     color: rgb(116, 116, 116);
-
-    font-size: 38px;
-    position: absolute; top: -72%;
-    left: 117%;
+  
+   font-size: 38px;
+   position:absolute;
+    left: 50%;
+    z-index: 1000;
+    top: 7%;
+    text-align: center;
     
   
   }
@@ -16,15 +19,9 @@
   
   #my-songs-header  {
     color: #fff;
-    position: absolute;
- 
-    left: 10%;
+   
+    text-align: center;
+
   
   }
-  #my-songs-separator{
-    color: rgb(116, 116, 116);
-    font-size: 78px;
-    
   
-  
-  }
