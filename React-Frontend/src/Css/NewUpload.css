@@ -1,0 +1,70 @@
+
+
+
+
+.uploadsong-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    height: 100vh;
+    background-color: #2a3950;
+  }
+  html{
+    background-color: #303e52;
+  width: 100%;
+  height: 100%;
+  
+  }
+  #upload-header{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin: 0 20px;
+    padding: 0 40px;
+    padding-bottom: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.582), 0 6px 20px 0 rgba(0, 0, 0, 0.561);
+    background-color: #2a3950;
+    border-radius: 12px;
+    border: 2px solid #fff;
+  }
+  #upload-listing{
+    background-color: white;
+  }
+   #company-logo-for-upload{
+     opacity: .6;
+     max-width: 360px;
+     width: 100%;
+   }
+   #pledge{
+     color: gray;
+   }
+  
+   #pledge span {
+     display: block;
+   }
+   
+   #upload-button{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 4px 15px;
+    color: #fff;
+    border: none;
+    overflow: hidden;
+    background-color: #355C7D;
+    font-weight: bold;
+    border-radius:12px;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.705);
+   }
+   #upload-image{
+    height: 50px;
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+   }
+  #upload-label{
+    font-size: 20px;
+  }
+  
