@@ -31,7 +31,7 @@ export default class SelectReviewSong extends React.Component {
             }
             else{
                 return(
-                <div  id = "select-song-blur" style = {{display : "none"}}>
+                <div  id = "select-song-blur" style = {{display:"none"}} >
                     
                         
                             <img id ="logo" src = {logo}></img>
@@ -45,7 +45,10 @@ export default class SelectReviewSong extends React.Component {
                                         
                                         return(
                                             <div className = "review-song">
-                                                <h1 className = "song-name">Song Name </h1>
+                                                <h1 className = "song-name">
+                                                    Song Name
+                                                    <h2 className = "dates">1/2/31</h2>
+                                                </h1>
                                                 <h1 className = "stats">
                                                     <img src = {orangedot}></img>
                                                    6 Completed Reviews {}
@@ -56,7 +59,7 @@ export default class SelectReviewSong extends React.Component {
                                                 </h1>
                                                 <h1 className = "stats">
                                                     <img src = {bluedot} ></img>
-                                                   Status : Active {}
+                                                   Status : <h2 className = 'status'>Active</h2> 
                                                 </h1>
                                                
                                                 

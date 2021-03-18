@@ -10,6 +10,21 @@
     border-radius: 12px;
     
 }
+.dates{
+    font-size: large;
+    color: gray;
+    position: relative;
+    left: 45%;
+    top: -45px;
+}
+.status{
+
+    font-size: medium;
+    position: relative;
+    top: -35px;
+    left: 20%;
+}
+
 #close-review-select{
     color: #fff;
     border: none;
@@ -55,8 +70,9 @@
 
 }
 .stats{
-    font-size: 2.0vw;
+    font-size: 4.0vw;
     color: #fff;
+    
 }
 .song-name{
     color: #fff;

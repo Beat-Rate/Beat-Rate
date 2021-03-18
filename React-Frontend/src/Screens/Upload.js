@@ -5,8 +5,9 @@ import PlayModal from '../Components/PlayModal';
 import firebase from 'firebase';
 import Loader from '../Components/Images/loader.gif';
 import Wave from "../Components/Images/wave.png";
-import upload  from '../Components/Images/upload-vector.png';
+import logo from '../Components/Images/logowithnobg.png';
 import Complete from "../Components/Images/complete.gif";
+import uploadimage from '../Components/Images/upload-page-image.png';
 //css
 import "../Css/upload.css"
 
@@ -137,20 +138,44 @@ export default class Upload extends React.Component{
 
     render(){
         return(
+            
             <div className="uploadsong-container">
                 <PlayModal image={this.state.image} onClose={()=>{this.hideModal()}} genreSelect={(event)=>{this.setGenre(event)}} onContinue={()=>{this.uploadSong()}} audioTitle={this.state.audioTitle}/>
-                
-                <div className="upload-body">
-                    <div className="upload-container">
-                        <input type="file" id="chosen-file" name="chosen-file" accept="audio/mp3" className="audio-selector" onChange={(event)=>{this.upload(event.target)}}/>
-                        <label  for="chosen-file" name="chosen-file">
-                            <div class="upload-song">
-                                <img src={upload} width="430px"/>
-                            </div>
-                        </label>
-                    </div>
+                <div id = "upload-header">
+                    <img 
+                        id = "company-logo-for-upload"
+                        src = {logo}
+                    >
+
+                    </img>
+                    <p id = "pledge"><em ><q> We pledge never to distribute any user content!</q> -Beat Rate</em></p>
+                    <button 
+                      id = "upload-button"
+                      onClick ={()=>{
+                          document.getElementById("chosen-file").click()
+                          
+                      }}
+                    >
+                        
+                        <img id = "upload-image" src = {uploadimage}></img>
+                        <h1 id = 'upload-label'>Upload</h1>
+                        
+                    </button>
                 </div>
+                <input type="file" id="chosen-file" name="chosen-file" accept="audio/mp3" className="audio-selector" onChange={(event)=>{this.upload(event.target)}}/>
+                <div id = "upload-listing">
+
+
+                </div>
+           
+       
             </div>
+         
+
+         
+
+
+
 
         );
     }
