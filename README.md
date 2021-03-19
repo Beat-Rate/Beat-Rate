@@ -26,5 +26,8 @@ Please read [CONTRIBUTING.md](https://github.com/Beat-Rate/Beat-Rate/blob/master
 
 ##
 
+## Code of Conduct
+
+Please read [CODE_OF_CONDUCT.md](https://github.com/Beat-Rate/Beat-Rate/blob/master/Documentation/code_of_conduct.md)  before starting to contributing and for details on our code of conduct.
 
 
