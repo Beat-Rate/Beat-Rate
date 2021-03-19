@@ -7,11 +7,13 @@ export default class ViewReviews extends React.Component {
     render() {
         return (
             <>
+            <center>
             <OverallReview rating = {(4).toFixed(1)}/>
             <div className = "review-list-container">
             <ReviewListComp num = {5}/>
                 
             </div>
+            </center>
             </>
         )
     }
