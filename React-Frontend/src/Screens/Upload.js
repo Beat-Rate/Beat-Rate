@@ -9,7 +9,7 @@ import logo from '../Components/Images/logowithnobg.png';
 import Complete from "../Components/Images/complete.gif";
 import uploadimage from '../Components/Images/upload-page-image.png';
 //css
-import "../Css/upload.css"
+import "../Css/NewUpload.css"
 
 var playingAudio;
 var { v4: uuidv4 } = require('uuid');
@@ -148,7 +148,7 @@ export default class Upload extends React.Component{
                     >
 
                     </img>
-                    <p id = "pledge"><em ><q> We pledge never to distribute any user content!</q> -Beat Rate</em></p>
+                    <p id = "pledge"><em ><q> We pledge never to distribute any user content!</q><span>-Beat Rate</span></em></p>
                     <button 
                       id = "upload-button"
                       onClick ={()=>{
