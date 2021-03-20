@@ -37,8 +37,8 @@ export default class ReviewListComp extends React.Component {
                     some revising with the middle portion of the 
                     song. Most notably at.....
                 </p>
-                <h3>Date : 3/7/2021</h3>
-                <hr className = "list-separator2"></hr>
+                <h3>3/7/2021</h3>
+                
 
             </div>
         )

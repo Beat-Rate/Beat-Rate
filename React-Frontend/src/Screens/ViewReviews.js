@@ -11,6 +11,12 @@ export default class ViewReviews extends React.Component {
             <OverallReview rating = {(4).toFixed(1)}/>
             <div className = "review-list-container">
             <ReviewListComp num = {5}/>
+            <ReviewListComp num = {4}/>
+            <ReviewListComp num = {3}/>
+            <ReviewListComp num = {2}/>
+            <ReviewListComp num = {1}/>
+            
+
                 
             </div>
             </center>
