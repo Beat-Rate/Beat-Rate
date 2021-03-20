@@ -1,0 +1,42 @@
+#report-review-popup{
+
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    overflow-y:hidden;
+    background-color: #42556e;
+    height: 60%;
+    width: 80%;
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.582), 0 24px 80px 0 rgba(0, 0, 0, 0.561);
+}
+.report-cat-img{
+    width: 80px;
+}
+.report-cat-button{
+   border: 2px solid rgb(255, 255, 255);
+   width: 50%;
+   margin-bottom: 5%;
+   padding: 5%;
+}
+.report-cat-button{
+    background-color: #725A7A;
+    
+}
+#report-header{
+    color: #fff;
+}
+#buttons-wrapper{
+    width: 100%;
+    height: 70%;
+    overflow-y: scroll;
+}
+#close-popup{
+    border: none;
+    background-color: #42556e;
+
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    left: 42%;
+}
