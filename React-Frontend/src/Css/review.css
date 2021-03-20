@@ -40,8 +40,6 @@
   }
   .review-comp h1{
     opacity: 0.8;
-    
-    
   }
   .review-comp p {
     font-weight: bold;
@@ -52,6 +50,9 @@
     position: absolute; top: -30px;
     width: 100%;
     background-color: #303e52;
+  }
+  .actionimgs{
+    width: 60px;
   }
   #overall-number{
     font-size: 80px;
