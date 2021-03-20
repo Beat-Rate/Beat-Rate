@@ -6,22 +6,28 @@ import lowqualityicon from '../Components/Images/lowqualityicon.png';
 import ReviewReportButton from './ReviewReportButton';
 //css
 import "../Css/ReportReview.css";
+
 export default class ReviewReportPopup extends React.Component {
     render() {
 
         return (
-            <div id = "report-review-popup">
-                <button id = "close-popup">X</button>
-                <h1>Report Review!</h1>
-                <div id = "report-row-1">
-                    <ReviewReportButton img = {trollicon} label = "trolling"/>
-                    <ReviewReportButton img = {hateicon} label = "hate speech"/>
-
-                </div>
-                <div id = "report-row-2">
-                    <ReviewReportButton img = {inappropriateicon} label = "inappropriate"/>
-                    <ReviewReportButton img = {lowqualityicon}  label = "low quality"/>
-                </div>
+            <div id = "report-review-popup" style = {{display : (this.props.state? "block" :"none")}}>
+                <button id = "close-popup" 
+                onClick = {
+                    ()=>{
+                        this.props.setparentstate({report_showing:false})
+                    }
+                }
+                >X
+                </button>
+                <h1 id = "report-header">Report Review!</h1>
+                    <div id = "buttons-wrapper">
+                    <ReviewReportButton id = "troll" img = {trollicon} label = "trolling"/>
+                    <ReviewReportButton  id= "hate"img = {hateicon} label = "hate speech"/>
+                    <ReviewReportButton  id = "ina"img = {inappropriateicon} label = "inappropriate"/>
+                    <ReviewReportButton  id = "lq"img = {lowqualityicon}  label = "low quality"/>
+                    </div>
+              
             </div>
         )
     }
