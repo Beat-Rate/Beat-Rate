@@ -1,5 +1,6 @@
 import React from 'react';
-import Upper from "../Components/Upper";
+import CreditEntry from '../Components/CreditEntry';
+
 import SongHandler from "../SongHandler"
 
 export default class Budget extends React.Component{
@@ -14,9 +15,8 @@ export default class Budget extends React.Component{
 render(){ 
 
     return(
-    <div className="logged-in-container">
-
-    <br/>
+    <div id = "budget-parent">
+        <CreditEntry/>
     </div>
     );
 }
