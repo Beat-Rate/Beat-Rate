@@ -1,0 +1,57 @@
+
+.credit-entry-row button{
+    width: 20%;
+    height: 10vh;
+    margin-left: 5%;
+    color: #ffffff;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.582), 0 3px 10px 0 rgba(0, 0, 0, 0.561);
+    border: none;
+}
+.credit-entry-row{
+    
+    
+}
+#creditinput{
+    background-color:#191e24;
+    width: 70%;
+    height: 7vh;
+    border: none;
+    border-radius: 16px;
+    
+}
+
+#budget-parent{
+    position: absolute;
+height: 100%;
+width: 100%;
+  
+
+  
+}
+#complete{
+    margin-top: 10%;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #C56C86;
+    height: 7vh;
+    width: 80%;
+}
+#bottom{
+    position: relative;
+    left: 12.5%;
+}
+.num1{
+
+}
+.num2{
+
+}
+.num3{
+
+}

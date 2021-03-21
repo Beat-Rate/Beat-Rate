@@ -1,11 +1,11 @@
 #report-review-popup{
 
     position: absolute;
-    bottom: 20%;
+    bottom: 5%;
     left: 10%;
     overflow-y:hidden;
     background-color: #42556e;
-    height: 60%;
+    height: 80%;
     width: 80%;
     box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.582), 0 24px 80px 0 rgba(0, 0, 0, 0.561);
 }
@@ -27,7 +27,7 @@
 }
 #buttons-wrapper{
     width: 100%;
-    height: 70%;
+    height: 80%;
     overflow-y: scroll;
 }
 #close-popup{
