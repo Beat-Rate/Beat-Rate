@@ -1,0 +1,34 @@
+
+.credit-entry-row button{
+    width: 20%;
+    height: 10vh;
+    margin-left: 5%;
+    color: #C56C86;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.582), 0 3px 10px 0 rgba(0, 0, 0, 0.561);
+    border: none;
+}
+.credit-entry-row{
+    
+    
+}
+
+#budget-parent{
+    position: absolute;
+height: 100%;
+width: 100%;
+  
+
+  
+}
+.num1{
+
+}
+.num2{
+
+}
+.num3{
+
+}
