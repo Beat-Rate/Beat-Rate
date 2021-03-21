@@ -2,10 +2,12 @@ import React from 'react'
 import CreditEntryRow from './CreditEntryRow'
 //css
 import '../Css/CreditEntry.css'
+import CreditEntryBottom from './CreditEntryBottom'
 export default class CreditEntry extends React.Component {
     render() {
         return (
             <div>
+                <input id = "creditinput"></input>
                 <CreditEntryRow 
                 num1 = "1"
                 num2 = "2"
@@ -22,6 +24,8 @@ export default class CreditEntry extends React.Component {
                 num2 = "8"
                 num3 = "9"
                 />
+                <CreditEntryBottom/>
+                <button id = "complete">Continue</button>
                 
                 
             </div>

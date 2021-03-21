@@ -15,9 +15,11 @@ export default class Budget extends React.Component{
 render(){ 
 
     return(
+    <center>
     <div id = "budget-parent">
         <CreditEntry/>
     </div>
+    </center>
     );
 }
 }
