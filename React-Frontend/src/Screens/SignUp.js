@@ -8,7 +8,7 @@ export default class SignUp extends React.Component{
     render(){
         return(
             <>
-            <center>
+            <center id = "maincenter"  >
             <SignUpHeader/>
             <BottomForm/>
             </center>
