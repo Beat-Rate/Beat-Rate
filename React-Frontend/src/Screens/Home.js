@@ -22,11 +22,12 @@ export default class Home extends React.Component{
     constructor(){
         super();
         this.state = {
-            errorText: '',
             songList: [],
             rename_displayed : false,
             current_song_handler : null,
-            confirm_showing :false
+            confirm_showing :false , 
+            error_showing :false,
+            success_showing :false//test
         }
         this.setState = this.setState.bind(this);
     }
@@ -116,14 +117,18 @@ export default class Home extends React.Component{
                         type = "song" state = {this.state.confirm_showing}
                         setparentstate = {this.setState}/>
                     <CRUDActionResponse 
+                        id = "crud-success-home"
                         img = {successlogo} 
                         message = "Process Successfully Completed, You can now close this dialog."
                         bttnLabel = "Got it"
+                        state = {this.state.success_showing}
                         />
                         
                     <CRUDActionResponse 
+                        id = "crud-error-home"
+                        state = {this.state.error_showing}
                         img = {errorlogo}
-                        message = "Opps! an error occurred, Please try again and report this "
+                        message = "Opps! an error occurred, Please try again"
                         bttnLabel = "Got it"/>
                     
                 </center>

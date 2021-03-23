@@ -3,7 +3,10 @@ import '../Css/CrudResponse.css';
 export default class CRUDActionResponse extends React.Component {
     render() {
         return (
-            <div className = "crud-response">
+            <div
+                id = {this.props.id}
+                style = {{display : (this.props.state?  "block":"none" )}} 
+                className = "crud-response">
                 
                     <img src = {this.props.img} ></img>
                     <p >{this.props.message}</p>
