@@ -32,7 +32,8 @@ export default class ViewReviews extends React.Component {
                 <ConfirmDeletionPopup 
                         state = {this.state.confirm_showing} 
                         type = "review"
-                        setparentstate = {this.setState}/>
+                        setparentstate = {this.setState}
+                        />
                 
             </center>
             </>

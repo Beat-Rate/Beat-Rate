@@ -13,15 +13,10 @@ export default class SongListComp extends React.Component{
             data :""
         };
     }
-    removeSongFromFirebase(){
-        this.song_handler.reference.set(null, (error )=>{
-            if(error){
-            }
-            else{
-                //
-             
-            }
-        })
+    startDeletion(){
+        this.props.setparentstate({
+            confirm_showing :true,
+            current_song_handler : this.song_handler})
     }
     //setting list empty because firebase re-renders
 
@@ -69,7 +64,7 @@ export default class SongListComp extends React.Component{
 
                     }}
                     >Rename</li>
-                    <li className = "song-options-grey" onClick = {()=>{this.removeSongFromFirebase()}}>Delete</li>
+                    <li className = "song-options-grey" onClick = {()=>{this.startDeletion()}}>Delete</li>
                     <li className = "song-options-red" >Increase </li>
                 </ul>
               
@@ -110,7 +105,7 @@ export default class SongListComp extends React.Component{
 
                         }}
                         >Rename</li>
-                        <li className = "song-options-grey" onClick = {()=>{this.removeSongFromFirebase()}}>Delete</li>
+                        <li className = "song-options-grey" onClick = {()=>{this.startDeletion()}}>Delete</li>
                         <li className = "song-options-red" >Get Reviews</li>
                     </ul>
                   

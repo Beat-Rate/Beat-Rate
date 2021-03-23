@@ -9,7 +9,12 @@ export default class ConfirmDeletionPopup extends React.Component {
                 <div>
                     <img src = {logo}></img>
                     <h1>Are you sure you would like to delete this {this.props.type}?</h1>
-                    <button>Delete</button>
+                    <button
+                        onClick = {()=>{
+                            this.props.fun()
+                            this.props.setparentstate({confirm_showing:false})
+                        }}   
+                    >Delete</button>
                     <button id = "cancel"
                         onClick = {()=>{
                             this.props.setparentstate({confirm_showing:false})
