@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import '../Css/CrudResponse.css';
 export default class CRUDActionResponse extends React.Component {
     render() {
         return (

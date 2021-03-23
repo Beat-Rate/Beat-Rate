@@ -51,10 +51,7 @@ export default class Upload extends React.Component{
         playingAudio.pause();
     }
 
-    showError(alertError){
-        this.setState({errorText: alertError});
-        document.getElementsByClassName("alert-parent-hidden")[0].classList.toggle("alert-parent");
-    }
+
 
     hideModal(){
         playingAudio.pause();
