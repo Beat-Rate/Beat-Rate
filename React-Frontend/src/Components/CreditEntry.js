@@ -3,11 +3,13 @@ import CreditEntryRow from './CreditEntryRow'
 //css
 import '../Css/CreditEntry.css'
 import CreditEntryBottom from './CreditEntryBottom'
+import CreditsTopBar from './CreditsTopBar'
 export default class CreditEntry extends React.Component {
     render() {
         return (
             <center>
                 <div id = "credit-parent">
+                    <CreditsTopBar credits = "100"/>
                     <input
                          id = "creditinput"
                          placeholder = "Credits..."></input>
@@ -28,8 +30,10 @@ export default class CreditEntry extends React.Component {
                     num3 = "9"
                     />
                     <CreditEntryBottom/>
-                    <button id = "complete">Continue</button>
-                    
+                    <div>
+                        <button id = "complete">Continue</button>
+                        <button id = "cancel-credit">Cancel</button>
+                    </div>
                     
                 </div>
             </center>
