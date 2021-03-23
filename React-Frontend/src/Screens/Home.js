@@ -4,7 +4,9 @@ import Upper from '../Components/Upper';
 import AlertBox from '../Components/AlertBox';
 import firebase from 'firebase/app';
 import SongListComp from '../Components/SongListComp';
-
+//images
+import successlogo from '../Components/Images/SuccessIcon.png';
+import errorlogo from '../Components/Images/ErrorIcon.png';
 //css
 import "../Css/BottomBar.css";
 import "../Css/mySongsHeader.css";
@@ -13,25 +15,24 @@ import "../Css/ListComponent.css"
 import RenamePopup from '../Components/RenamePopup';
 import SelectReviewSong from '../Components/SelectReviewSong';
 import ConfirmDeletionPopup from '../Components/ConfirmDeletionPopup';
+import CRUDActionResponse from '../Components/CRUDActionResponse';
 var { v4: uuidv4 } = require('uuid');
 export default class Home extends React.Component{
 
     constructor(){
         super();
         this.state = {
-            errorText: '',
             songList: [],
             rename_displayed : false,
             current_song_handler : null,
-            confirm_showing :false
+            confirm_showing :false , 
+            error_showing :true,
+            success_showing :false//test
         }
         this.setState = this.setState.bind(this);
     }
 
-    showError(alertError){
-        this.setState({errorText: alertError});
-        document.getElementsByClassName("alert-parent-hidden")[0].classList.toggle("alert-parent");
-    }
+
     gatherData(){
         var thisUser = JSON.parse(localStorage.getItem("user")).uid;
         firebase.database().ref("Users/"+thisUser+"/Songs").on("value", data => {
@@ -115,6 +116,20 @@ export default class Home extends React.Component{
                         fun = {()=>{this.removeSongFromFirebase()}} 
                         type = "song" state = {this.state.confirm_showing}
                         setparentstate = {this.setState}/>
+                    <CRUDActionResponse 
+                        id = "crud-success-home"
+                        img = {successlogo} 
+                        message = "Process Successfully Completed, You can now close this dialog."
+                        bttnLabel = "Got it"
+                        state = {this.state.success_showing}
+                        />
+                        
+                    <CRUDActionResponse 
+                        id = "crud-error-home"
+                        state = {this.state.error_showing}
+                        img = {errorlogo}
+                        message = "Opps! an error occurred, Please try again"
+                        bttnLabel = "Got it"/>
                     
                 </center>
             </div>

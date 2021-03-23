@@ -1,0 +1,46 @@
+.crud-response{
+    position: absolute;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.582), 0 12px 40px 0 rgba(0, 0, 0, 0.561);
+    background-color: #283241;
+    z-index: 10002;
+    width: 80%;
+    height: 60%;
+}
+.crud-response img{
+    width: 200px;
+   
+}
+.crud-response p {
+    color: white;
+    font-size: 20px;
+    position: relative;
+    top: -100px;
+}
+.crud-response button{
+    position: relative;
+    top: -100px;
+    font-size: 30px; 
+    background:none;
+        
+    width: 40%;
+    height: 10vh;
+    
+
+    color: rgb(255, 255, 255);
+}
+#crud-success-home{
+    bottom: 28%;
+    left: 10%;
+}
+#crud-error-home{
+    bottom: 28%;
+    left: 10%;
+}
+#crud-success-home button{
+    border: 2px solid green;
+
+}
+#crud-error-home button{
+    border: 2px solid red;
+    
+}
