@@ -4,7 +4,7 @@ import Upper from '../Components/Upper';
 import AlertBox from '../Components/AlertBox';
 import firebase from 'firebase/app';
 import SongListComp from '../Components/SongListComp';
-import localStorageLeft from '../Components/StorageCalculator'
+
 //css
 import "../Css/BottomBar.css";
 import "../Css/mySongsHeader.css";
@@ -12,6 +12,7 @@ import "../Css/SongOptions.css";
 import "../Css/ListComponent.css"
 import RenamePopup from '../Components/RenamePopup';
 import SelectReviewSong from '../Components/SelectReviewSong';
+import ConfirmDeletionPopup from '../Components/ConfirmDeletionPopup';
 var { v4: uuidv4 } = require('uuid');
 export default class Home extends React.Component{
 
@@ -21,7 +22,8 @@ export default class Home extends React.Component{
             errorText: '',
             songList: [],
             rename_displayed : false,
-            current_song_handler : null
+            current_song_handler : null,
+            confirm_showing :false
         }
         this.setState = this.setState.bind(this);
     }
@@ -40,6 +42,7 @@ export default class Home extends React.Component{
             }else{
             for(var key in songList){
                 //sets key of the object
+                //so we can access it in other components
                 songList[key].key = key;
                 arr.push(songList[key]);
             }
@@ -50,6 +53,16 @@ export default class Home extends React.Component{
     componentDidMount(){
        this.gatherData();
   
+    }
+    removeSongFromFirebase(){
+        this.state.current_song_handler.reference.set(null, (error )=>{
+            if(error){
+            }
+            else{
+                
+             
+            }
+        })
     }
     
     truncate(str){
@@ -69,6 +82,7 @@ export default class Home extends React.Component{
                 <AlertBox message={this.state.errorText} />
                 <h2 id = "my-songs-header"> My Songs<h3 id = "my-songs-count">{this.state.songList.length}</h3></h2>
                 <div className="main-body">
+                    
                     <center>
                         <div className="songs-container">
                             {
@@ -96,7 +110,13 @@ export default class Home extends React.Component{
                              size = {this.state.songList.length}
                              />
                 <SelectReviewSong songList = {this.state.songList}/>
-                
+                <center>
+                    <ConfirmDeletionPopup 
+                        fun = {()=>{this.removeSongFromFirebase()}} 
+                        type = "song" state = {this.state.confirm_showing}
+                        setparentstate = {this.setState}/>
+                    
+                </center>
             </div>
 
         );

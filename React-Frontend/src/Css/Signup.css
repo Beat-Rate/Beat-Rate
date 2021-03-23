@@ -2,6 +2,12 @@
     color: #fff;
     font-size: 320%;
 }
+#Header{
+    background-color: #303e52;
+}
+#bottom-form , #maincenter{
+    background-color: #303e52;
+}
 #Header button{
     color: #fff;
     border: none;
