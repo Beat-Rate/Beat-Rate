@@ -4,25 +4,28 @@
     background-color: #283241;
     z-index: 10002;
     width: 80%;
-    height: 50%;
+    height: 60%;
 }
 .crud-response img{
-    width: 35vw;
+    width: 200px;
+   
 }
 .crud-response p {
     color: white;
     font-size: 20px;
     position: relative;
-    top: -21%;
-
+    top: -100px;
 }
 .crud-response button{
-  
+    position: relative;
+    top: -100px;
     font-size: 30px; 
     background:none;
-    padding: 5%;
-    position: relative;
-    bottom: 13%;
+        
+    width: 40%;
+    height: 10vh;
+    
+
     color: rgb(255, 255, 255);
 }
 #crud-success-home{
