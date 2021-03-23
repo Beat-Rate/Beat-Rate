@@ -32,7 +32,9 @@ export default class CreditEntry extends React.Component {
                     <CreditEntryBottom/>
                     <div>
                         <button id = "complete">Continue</button>
-                        <button id = "cancel-credit">Cancel</button>
+                        <button onClick = {()=>{
+                            window.location.replace("/");
+                        }} id = "cancel-credit">Cancel</button>
                     </div>
                     
                 </div>

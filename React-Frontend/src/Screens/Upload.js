@@ -8,6 +8,7 @@ import Wave from "../Components/Images/wave.png";
 import logo from '../Components/Images/logowithnobg.png';
 import Complete from "../Components/Images/complete.gif";
 import uploadimage from '../Components/Images/upload-page-image.png';
+import arrow from '../Components/Images/arrow.png';
 //css
 import "../Css/NewUpload.css"
 
@@ -136,38 +137,46 @@ export default class Upload extends React.Component{
     render(){
         return(
             
-            <div className="uploadsong-container">
-                <PlayModal image={this.state.image} onClose={()=>{this.hideModal()}} genreSelect={(event)=>{this.setGenre(event)}} onContinue={()=>{this.uploadSong()}} audioTitle={this.state.audioTitle}/>
-                <div id = "upload-header">
+              
+                <div className="uploadsong-container">
                     <img 
-                        id = "company-logo-for-upload"
-                        src = {logo}
-                    >
+                        src = {arrow}
+                         id = "back-arrow-upload" 
+                        onClick = {
+                            ()=>{window.location.replace("/");}
+                            }
+                    ></img>
+                    <PlayModal image={this.state.image} onClose={()=>{this.hideModal()}} genreSelect={(event)=>{this.setGenre(event)}} onContinue={()=>{this.uploadSong()}} audioTitle={this.state.audioTitle}/>
+                    <div id = "upload-header">
+                        <img 
+                            id = "company-logo-for-upload"
+                            src = {logo}
+                        >
 
-                    </img>
-                    <p id = "pledge"><em ><q> We pledge never to distribute any user content!</q><span>-Beat Rate</span></em></p>
-                    <button 
-                      id = "upload-button"
-                      onClick ={()=>{
-                          document.getElementById("chosen-file").click()
-                          
-                      }}
-                    >
-                        
-                        <img id = "upload-image" src = {uploadimage}></img>
-                        <h1 id = 'upload-label'>Upload</h1>
-                        
-                    </button>
+                        </img>
+                        <p id = "pledge"><em ><q> We pledge never to distribute any user content!</q><span>-Beat Rate</span></em></p>
+                        <button 
+                        id = "upload-button"
+                        onClick ={()=>{
+                            document.getElementById("chosen-file").click()
+                            
+                        }}
+                        >
+                            
+                            <img id = "upload-image" src = {uploadimage}></img>
+                            <h1 id = 'upload-label'>Upload</h1>
+                            
+                        </button>
+                    </div>
+                    <input type="file" id="chosen-file" name="chosen-file" accept="audio/mp3" className="audio-selector" onChange={(event)=>{this.upload(event.target)}}/>
+                    <div id = "upload-listing">
+
+
+                    </div>
+            
+        
                 </div>
-                <input type="file" id="chosen-file" name="chosen-file" accept="audio/mp3" className="audio-selector" onChange={(event)=>{this.upload(event.target)}}/>
-                <div id = "upload-listing">
-
-
-                </div>
-           
-       
-            </div>
-         
+            
 
          
 

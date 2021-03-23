@@ -26,7 +26,7 @@ export default class Home extends React.Component{
             rename_displayed : false,
             current_song_handler : null,
             confirm_showing :false , 
-            error_showing :true,
+            error_showing :false,
             success_showing :false//test
         }
         this.setState = this.setState.bind(this);

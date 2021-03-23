@@ -7,7 +7,7 @@
     height: 60%;
 }
 .crud-response img{
-    width: 200px;
+    width: 150px;
    
 }
 .crud-response p {
@@ -19,11 +19,11 @@
 .crud-response button{
     position: relative;
     top: -100px;
-    font-size: 30px; 
+    font-size: 20px; 
     background:none;
         
     width: 40%;
-    height: 10vh;
+    height: 7vh;
     
 
     color: rgb(255, 255, 255);
