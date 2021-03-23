@@ -1,0 +1,31 @@
+#Confirm-Wrapper{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    background-color: #283241;
+    height: 50%;
+    width: 80%;
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.582), 0 24px 80px 0 rgba(0, 0, 0, 0.561);
+}
+#Confirm-Wrapper h1 {
+    color: #ffffff;
+    margin: 1%;
+    font-size: 30px;
+}
+#Confirm-Wrapper button{
+    background: none;
+    font-size: 30px;
+    color: #C56C86;
+    margin-top: 6%;
+    font-weight: bold;
+    position: relative;
+    left: 3%;
+    border: 2px solid #C56C86;;
+    margin-right: 5%;
+}
+#Confirm-Wrapper img{
+    width: 250px;
+}
+#cancel{
+    opacity: .6;
+}

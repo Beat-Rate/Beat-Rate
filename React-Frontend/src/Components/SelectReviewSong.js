@@ -2,8 +2,8 @@ import React from 'react';
 import orangedot from '../Components/Images/orangedot.png';
 import pinkdot from '../Components/Images/pinkdot.png';
 import bluedot from '../Components/Images/bluedot.png';
-import logo from '../Components/Images/logowithnobg.png'
-import '../Css/SelectReviewSong.css'
+import logo from '../Components/Images/logowithnobg.png';
+import '../Css/SelectReviewSong.css';
 export default class SelectReviewSong extends React.Component {
 
 
