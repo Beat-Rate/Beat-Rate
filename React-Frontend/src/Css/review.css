@@ -59,3 +59,10 @@
     position: relative;
     color: #fff;
   }
+  #back-arrow{
+    position: absolute;
+    z-index: 3000;
+    top: 1%;
+    left: 2%;
+    width: 50px;
+  }

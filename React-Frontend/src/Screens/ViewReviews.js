@@ -5,6 +5,7 @@ import '../Css/ConfirmDeletion.css';
 import ReviewListComp from '../Components/ReviewListComp'
 import ReviewReportPopup from '../Components/ReviewReportPopup'
 import ConfirmDeletionPopup from '../Components/ConfirmDeletionPopup'
+import arrow from '../Components/Images/arrow.png';
 // map reviews to reviewlistcomp
 export default class ViewReviews extends React.Component {
 
@@ -19,6 +20,13 @@ export default class ViewReviews extends React.Component {
     render() {
         return (
             <>
+            <img 
+                id = "back-arrow"  
+                src = {arrow}
+                onClick = {()=>{
+                    window.location.replace("/")
+                }}
+                ></img>
             <center>
                 <OverallReview rating = {(4).toFixed(1)}/>
                 <div className = "review-list-container">

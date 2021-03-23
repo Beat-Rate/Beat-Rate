@@ -6,7 +6,9 @@ export default class CreditsTopBar extends React.Component {
         return (
             <div id  = "credits-topbar">
                 <h1>Available Credits<img src  = {avaliable_credit_icon}></img></h1>
-                <h2>{this.props.credits}</h2>
+                <center>
+                    <h2>{this.props.credits}</h2>
+                </center>
                 
                 
             </div>

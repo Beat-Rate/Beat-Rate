@@ -1,7 +1,14 @@
 
 
 
-
+#back-arrow-upload{
+  position: absolute;
+  z-index: 1;
+  bottom: 93%;
+  left: 2%;
+  width: 50px;
+  
+} 
 .uploadsong-container{
     display:flex;
     justify-content:center;
