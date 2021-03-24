@@ -28,6 +28,7 @@ export default class RenamePopup extends React.Component {
                         id = "newNameInput"  
                         onInput={(event)=>{this.setState({text: event.target.value})}}
                         placeholder = "New Name"></input>
+                        
                     <div  id = "RenamePopupButtons">
                         <button onClick = {()=>{this.Rename()}}>Confirm</button>
                         <button onClick = {()=>{
