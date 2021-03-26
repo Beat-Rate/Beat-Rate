@@ -1,4 +1,4 @@
-import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
+import {BrowserRouter as Router,Route} from "react-router-dom";
 import SignUp from './Screens/SignUp';
 import SignIn from './Screens/SignIn';
 import Home from './Screens/Home';
@@ -6,12 +6,21 @@ import Upload from './Screens/Upload';
 import Budget from './Screens/Budget';
 
 import ViewReviews from './Screens/ViewReviews';
+import DesktopHomeScreen from "./Screens/DesktopScreen";
 
 export var loggedInRoutes =
 <Router>
 
   <Route exact path="/">
-      <Home/>
+     {
+      window.screen.width > 800? <DesktopHomeScreen/> :<Home/>
+            
+      
+     }
+       
+     
+
+    
     </Route>
 
     <Route exact path="/upload">
@@ -42,13 +51,3 @@ export var loggedOutRoutes =
 
 </Router>;
 
-export var desktopLoggedInRoutes = 
-
-<Router>
-
-
-  <div>
-    
-  </div>
-
-</Router>;
