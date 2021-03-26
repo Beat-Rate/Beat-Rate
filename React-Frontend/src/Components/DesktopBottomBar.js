@@ -9,13 +9,16 @@ export default class DesktopBottomBar extends React.Component {
             <div id = "desktop-bottom-bar">
                 <div id = "review-btm" className = "desktop-buttons-btm">
                      <img src = {review}></img>
+                     <h5>0</h5>
                 </div>
                 <div id = "upload-btm" className = "desktop-buttons-btm">
                      <img src = {upload}></img>  
+                     <h5>0</h5>
                 </div>
                
                 <div id = "wallet-btm" className = "desktop-buttons-btm" >
                     <img src = {wallet}></img>
+                    <h5>0</h5>
                 </div>
                 
             </div>
