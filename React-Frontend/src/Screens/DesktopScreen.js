@@ -23,6 +23,8 @@ export default class DesktopHomeScreen extends React.Component {
 
                 </div>
                 <DesktopBottomBar/>
+                <h1 id = "no-song-msg">Looks like you haven't uploaded any songs yet... </h1>
+                
             </div>
         )
     }

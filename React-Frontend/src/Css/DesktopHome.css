@@ -21,3 +21,8 @@
     display:block;
 
 }
+#no-song-msg{
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+}
