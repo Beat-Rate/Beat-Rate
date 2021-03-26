@@ -9,7 +9,7 @@ import ViewReviews from './Screens/ViewReviews';
 
 export var loggedInRoutes =
 <Router>
-  <Switch>
+
   <Route exact path="/">
       <Home/>
     </Route>
@@ -26,12 +26,12 @@ export var loggedInRoutes =
       
     </Route>
     
-  </Switch>
+
 </Router>;
 
 export var loggedOutRoutes =
 <Router>
-  <Switch>
+
     <Route exact path="/">
       <SignUp/>
     </Route>
@@ -39,6 +39,16 @@ export var loggedOutRoutes =
     <Route exact path="/signin">
       <SignIn/>
     </Route>
-  </Switch>
+
 </Router>;
 
+export var desktopLoggedInRoutes = 
+
+<Router>
+
+
+  <div>
+    
+  </div>
+
+</Router>;
