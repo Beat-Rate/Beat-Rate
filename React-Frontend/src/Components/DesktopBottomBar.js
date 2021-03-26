@@ -7,6 +7,16 @@ export default class DesktopBottomBar extends React.Component {
     render() {
         return (
             <div id = "desktop-bottom-bar">
+                <div>
+                     <img src = {review}></img>
+                </div>
+                <div>
+                     <img src = {upload}></img>  
+                </div>
+               
+                <div>
+                    <img src = {wallet}></img>
+                </div>
                 
             </div>
         )
