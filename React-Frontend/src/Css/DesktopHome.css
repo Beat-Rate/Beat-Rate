@@ -1,0 +1,23 @@
+#desktop-parent{
+    align-self: center;
+    border-radius: 12px;
+    width: 70%;
+    height: 83%;
+    background-color: #101317;
+    position: absolute;
+    top:10%;
+    left: 15%;
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.582), 0 24px 80px 0 rgba(0, 0, 0, 0.561);
+}
+#desktop-logo{
+    width: 210px;
+    margin: auto;
+
+    position: absolute;
+    left: 50%;
+    top: 7%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display:block;
+
+}
