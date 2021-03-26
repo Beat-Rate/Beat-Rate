@@ -1,9 +1,41 @@
-button{
 
-   width: 100px;
-   height: 120px;
-}
 img{
-    width: 180px;
-    
+    width: 140px;
+    position: relative;
+    left: -14%;
+
+}
+
+.desktop-buttons-btm{
+    border-radius: 50%;
+    width: 105px;
+    height: 105px;
+   
+    margin-top: 6%;
+    margin-left: 5%;
+}
+.desktop-buttons-btm h5{
+    font-size: 24px;
+    position: relative;
+    top: -31%;
+    left: 41%;
+}
+#wallet-btm{
+    background-color: #FF7582;
+}
+#upload-btm{
+    background-color: #355C7D;
+}
+#review-btm{
+    background-color: #725A7A;
+}
+#wallet-btm h5{
+    color:#FF7582;
+
+}
+#upload-btm h5{
+    color: #355C7D;
+}
+#review-btm{
+    color: #725A7A;
 }
