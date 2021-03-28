@@ -4,6 +4,7 @@ import SignIn from './Screens/SignIn';
 import Home from './Screens/Home';
 import Upload from './Screens/Upload';
 import Budget from './Screens/Budget';
+import Contact from './Screens/Contact';
 
 import ViewReviews from './Screens/ViewReviews';
 import DesktopHomeScreen from "./Screens/DesktopScreen";
@@ -34,7 +35,10 @@ export var loggedInRoutes =
     <Route exact path="/budget/:pushId" component = {Budget}>
       
     </Route>
-    
+    <Route exact path = "/contact"> 
+     <Contact/>
+
+    </Route>
 
 </Router>;
 
@@ -47,6 +51,10 @@ export var loggedOutRoutes =
 
     <Route exact path="/signin">
       <SignIn/>
+    </Route>
+    <Route exact path = "/contact"> 
+     <Contact/>
+
     </Route>
 
 </Router>;

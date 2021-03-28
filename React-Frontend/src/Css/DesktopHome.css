@@ -26,3 +26,9 @@
     position: relative;
     color: #ffffff;
 }
+#desktop-songs-header{
+    color: rgb(116, 116, 116);
+    position: absolute;
+    left: 46%;
+    top: 12%;
+}
