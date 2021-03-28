@@ -1,0 +1,71 @@
+
+
+#contact-parent-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#contact-parent{
+    width: 80%;
+    height: 70%;
+    background-color: #101317;
+    border-radius: 12px;
+    position: relative;
+    left: 10%;
+    top: 10%;
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.582), 0 24px 80px 0 rgba(0, 0, 0, 0.561);
+}
+#contact-parent h1{
+    text-align: center;
+    color: #C56C86;
+
+}
+#contact-parent p{
+    color: #fff;
+    font-weight: bold;
+    margin-left: 2%;
+    position: fixed;
+    top: 5%;
+   
+}
+#contact-parent input{
+    border:2px solid #C56C86;
+    width: 80%;
+    height: 10%;
+    background: none;
+    color: #ffffff;
+    margin-top: 4%;
+    padding-left: 8px;
+    position: relative;
+    left: 7%;
+    bottom: 10%;
+    
+
+}
+#contact-parent input::placeholder{
+    color: #ffffff;
+    font-size: 20px;
+    
+}
+#contact-parent img{
+    position: relative;
+    left: 30%;
+    top: -5%;
+    opacity: .5;
+}
+#contact-parent textarea{
+    position: relative;
+    resize: none;
+    background:none;
+    border:2px solid #C56C86;
+    color: #ffffff;
+    font-size: 20px;
+    width: 80%;
+    height: 36%;
+    padding-left: 2%;
+    left: 7%;
+    top: -7%;
+}
+#contact-parent textarea::placeholder{
+    color: #ffffff;
+}
