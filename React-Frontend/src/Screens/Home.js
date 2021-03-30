@@ -16,6 +16,7 @@ import RenamePopup from '../Components/RenamePopup';
 import SelectReviewSong from '../Components/SelectReviewSong';
 import ConfirmDeletionPopup from '../Components/ConfirmDeletionPopup';
 import CRUDActionResponse from '../Components/CRUDActionResponse';
+import HomeFunctionality from '../Components/HomeFunctionality.js';
 var { v4: uuidv4 } = require('uuid');
 export default class Home extends React.Component{
 
@@ -30,41 +31,16 @@ export default class Home extends React.Component{
             success_showing :false//test
         }
         this.setState = this.setState.bind(this);
+        this.functionality = new HomeFunctionality(this);
     }
 
 
-    gatherData(){
-        var thisUser = JSON.parse(localStorage.getItem("user")).uid;
-        firebase.database().ref("Users/"+thisUser+"/Songs").on("value", data => {
-            let arr = [];
-            var songList = data.val();
-            if(songList == null || songList == 'null'){
-                this.setState({songList:[]});
-            }else{
-            for(var key in songList){
-                //sets key of the object
-                //so we can access it in other components
-                songList[key].key = key;
-                arr.push(songList[key]);
-            }
-            this.setState({songList: arr});
-        }
-        })
-    }
+    
     componentDidMount(){
-       this.gatherData();
+       this.functionality.gatherData();
   
     }
-    removeSongFromFirebase(){
-        this.state.current_song_handler.reference.set(null, (error )=>{
-            if(error){
-            }
-            else{
-                
-             
-            }
-        })
-    }
+  
     
     truncate(str){
      
@@ -110,7 +86,7 @@ export default class Home extends React.Component{
                 <SelectReviewSong songList = {this.state.songList}/>
                 <center>
                     <ConfirmDeletionPopup 
-                        fun = {()=>{this.removeSongFromFirebase()}} 
+                        fun = {()=>{this.functionality.removeSongFromFirebase()}} 
                         type = "song" state = {this.state.confirm_showing}
                         setparentstate = {this.setState}/>
                     <CRUDActionResponse 
