@@ -67,12 +67,9 @@ export default class Home extends React.Component{
     }
     
     truncate(str){
-         if(window.screen.width>800){
-            return (str.length > 78) ? str.substr(0, 77) + ".." : str;
-         } 
-         else{
+     
              return  (str.length > 28) ? str.substr(0, 27) + ".." : str;
-         }
+         
         
       };
 

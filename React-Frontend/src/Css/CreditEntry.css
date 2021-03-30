@@ -70,7 +70,7 @@ width: 100%;
    
 }
 #complete{
-    margin-top: 10%;
+    margin-top: 2%;
     border: none;
     border-radius: 12px;
     color: white;
@@ -84,7 +84,7 @@ width: 100%;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.582), 0 3px 10px 0 rgba(0, 0, 0, 0.561);
 }
 #cancel-credit{
-    margin-top: 10%;
+    
     border: none;
     border-radius: 12px;
     color: white;
@@ -93,6 +93,7 @@ width: 100%;
     background-color: #C56C86;
     height: 7vh;
     width: 45%;
+
     position: relative;
     right: -2%;
     opacity: 0.6;
