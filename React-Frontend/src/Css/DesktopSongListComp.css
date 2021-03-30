@@ -1,0 +1,41 @@
+.desktop-list-comp img{
+    width: 70px;
+    position: relative;
+    left: 33%;
+    top: 15px;
+}
+.desktop-list-comp {
+    position: relative;
+    background-color: #303e52;
+    height: 20%;
+    width: 80%;
+    border-radius: 12px;
+    margin-left: 7%;
+    margin-top: 5%;
+}
+.desktop-options li{
+    list-style-type: none;
+    margin-left: 2%;
+    overflow: hidden;
+    display: inline;
+    background-color: #C56C86;
+    border-radius: 12px;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    left: -12%;
+    top: -20px;
+ 
+
+    
+}
+.desktop-list-name{
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 10%;
+  
+  
+}
