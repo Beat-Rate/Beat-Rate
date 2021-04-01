@@ -34,7 +34,7 @@ export default class DesktopHomeScreen extends React.Component {
                 <img id = "desktop-logo" src = {logo}></img>
                 <h2 id = "desktop-songs-header"> My Songs</h2>
    
-                <DesktopBottomBar/>
+                <DesktopBottomBar song_len = {this.state.songList.length}/>
                 <h1 
                     style = {{display: (this.state.songList.length > 0?  "none":"block" )}}
                     id = "no-song-msg">Looks like you haven't uploaded any songs yet... </h1>
