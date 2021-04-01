@@ -1,0 +1,20 @@
+#desktop-footer{
+    width: 10vw;
+    height: 60vh;
+    background-color: #101317;
+    position: absolute;
+    overflow: hidden;
+    left: 3%;
+    top: 23%;
+    border-radius: 12px;
+}
+#desktop-footer ul {
+    list-style-type: none;
+    position: relative;
+    left: -5%;
+}
+#desktop-footer li {
+    color: white;
+    font-size: 2em;
+    margin-top: 30%;
+}
