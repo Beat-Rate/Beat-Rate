@@ -11,7 +11,11 @@ export default class DesktopBottomBar extends React.Component {
                      <img src = {review}></img>
                      <h5>0</h5>
                 </div>
-                <div id = "upload-btm" className = "desktop-buttons-btm">
+                <div 
+                    id = "upload-btm" 
+                    className = "desktop-buttons-btm"
+                    onClick = {()=>{window.location.replace("/upload");}}
+                    >
                      <img src = {upload}></img>  
                      <h5>0</h5>
                 </div>
