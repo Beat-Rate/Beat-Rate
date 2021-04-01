@@ -4,6 +4,7 @@ import logo from "../Components/Images/logowithnobg.png";
 import DesktopBottomBar from '../Components/DesktopBottomBar.js';
 import HomeFunctionality from '../Components/HomeFunctionality.js';
 import DesktopSongListComp from '../Components/DesktopSongListComp.js';
+import Footer from '../Components/footer.js';
 export default class DesktopHomeScreen extends React.Component {
 
 
@@ -21,7 +22,7 @@ export default class DesktopHomeScreen extends React.Component {
 
         
         return (
-            
+            <>
             <div id = "desktop-parent">
                 <img id = "desktop-logo" src = {logo}></img>
                 <h2 id = "desktop-songs-header"> My Songs</h2>
@@ -36,6 +37,8 @@ export default class DesktopHomeScreen extends React.Component {
                     })}
                 </div>
             </div>
+            <Footer/>
+            </>
         )
     }
 }
