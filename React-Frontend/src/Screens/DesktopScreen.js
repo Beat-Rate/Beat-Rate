@@ -4,20 +4,22 @@ import logo from "../Components/Images/logowithnobg.png";
 import DesktopBottomBar from '../Components/DesktopBottomBar.js';
 import HomeFunctionality from '../Components/HomeFunctionality.js';
 import DesktopSongListComp from '../Components/DesktopSongListComp.js';
-import RenamePopup  from "../Components/RenamePopup.js";
 import Footer from '../Components/footer.js';
-import CRUDActionResponse from '../Components/CRUDActionResponse';
-import successlogo from '../Components/Images/SuccessIcon.png';
-import errorlogo from '../Components/Images/ErrorIcon.png';
+import CollectivePopups from "../Components/CollectivePopups.js";
 export default class DesktopHomeScreen extends React.Component {
 
 
     constructor(){
         super();
         this.state = {
-            songList : []
+            songList : [],
+            current_song_handler : null,
+            confirm_showing :false , 
+            error_showing :false,
+            success_showing :false//test
         }
         this.functionality = new HomeFunctionality(this);
+        this.setState = this.setState.bind(this);
     }
     componentDidMount(){
         this.functionality.gatherData();
@@ -42,22 +44,21 @@ export default class DesktopHomeScreen extends React.Component {
                 </div>
             </div>
             <Footer/>
-            <RenamePopup/>
-            <CRUDActionResponse 
-                        id = "crud-success-home"
-                        img = {successlogo} 
-                        message = "Process Successfully Completed, You can now close this dialog."
-                        bttnLabel = "Got it"
-                        state = {this.state.success_showing}
-                        />
-                        
-            <CRUDActionResponse 
-                         id = "crud-error-home"
-                        state = {this.state.error_showing}
-                        img = {errorlogo}
-                        message = "Opps! an error occurred, Please try again"
-                        bttnLabel = "Got it"/>
+
+
+
+            <CollectivePopups
+                rename_displayed = {this.state.rename_displayed}
+                current_song_handler = {this.state.current_song_handler}
+                parent_state = {this.setState}
+                size = {this.state.songList.length}
+                functionality = {this.functionality}
+                confirm_state = {this.confirm_showing}
+                success_state = {this.error_showing}
+                error_state = {this.success_showing}
                     
+            
+            />
 
             </>
         )
