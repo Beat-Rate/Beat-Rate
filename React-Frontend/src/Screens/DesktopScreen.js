@@ -4,7 +4,11 @@ import logo from "../Components/Images/logowithnobg.png";
 import DesktopBottomBar from '../Components/DesktopBottomBar.js';
 import HomeFunctionality from '../Components/HomeFunctionality.js';
 import DesktopSongListComp from '../Components/DesktopSongListComp.js';
+import RenamePopup  from "../Components/RenamePopup.js";
 import Footer from '../Components/footer.js';
+import CRUDActionResponse from '../Components/CRUDActionResponse';
+import successlogo from '../Components/Images/SuccessIcon.png';
+import errorlogo from '../Components/Images/ErrorIcon.png';
 export default class DesktopHomeScreen extends React.Component {
 
 
@@ -38,6 +42,23 @@ export default class DesktopHomeScreen extends React.Component {
                 </div>
             </div>
             <Footer/>
+            <RenamePopup/>
+            <CRUDActionResponse 
+                        id = "crud-success-home"
+                        img = {successlogo} 
+                        message = "Process Successfully Completed, You can now close this dialog."
+                        bttnLabel = "Got it"
+                        state = {this.state.success_showing}
+                        />
+                        
+            <CRUDActionResponse 
+                         id = "crud-error-home"
+                        state = {this.state.error_showing}
+                        img = {errorlogo}
+                        message = "Opps! an error occurred, Please try again"
+                        bttnLabel = "Got it"/>
+                    
+
             </>
         )
     }
