@@ -40,7 +40,7 @@ export default class DesktopHomeScreen extends React.Component {
                     id = "no-song-msg">Looks like you haven't uploaded any songs yet... </h1>
                 <div id = "desktop-list-container">
                     {this.state.songList.map(song =>{
-                        return <DesktopSongListComp setparentstate = {this.setState} song = {song}/>
+                        return <DesktopSongListComp id = {song.key} setparentstate = {this.setState} song = {song}/>
                     })}
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 import PlayImage from "../Components/Images/play-img.png";
-import SongHandler from "../SongHandler"
+import SongHandler from "../SongHandler";
 import ListCompFunc from "../Components/ListCompFunctionality.js";
 export default class SongListComp extends React.Component{
 
@@ -14,7 +14,7 @@ export default class SongListComp extends React.Component{
         this.state = {
             data :""
         };
-        this.functionality = new ListCompFunc(this,);
+        this.functionality = new ListCompFunc(this);
         
     }
 
