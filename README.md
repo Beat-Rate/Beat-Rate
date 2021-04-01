@@ -31,3 +31,7 @@ Please read [CONTRIBUTING.md](https://github.com/Beat-Rate/Beat-Rate/blob/master
 Please read [CODE_OF_CONDUCT.md](https://github.com/Beat-Rate/Beat-Rate/blob/master/Documentation/code_of_conduct.md)  before starting to contributing and for details on our code of conduct.
 
 
+
+## Sample GUI
+
+<img  src = "https://github.com/Beat-Rate/Beat-Rate/blob/master/React-Frontend/src/Components/Images/current-ui.png"  />
