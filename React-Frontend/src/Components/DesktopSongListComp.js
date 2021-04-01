@@ -3,6 +3,11 @@ import playbttn from '../Components/Images/play-img.png';
 import "../Css/DesktopSongListComp.css";
 
 export default class DesktopSongListComp extends React.Component {
+    startDeletion(){
+        this.props.setparentstate({
+            confirm_showing :true,
+            current_song_handler : this.song_handler})
+    }
     truncate(str){
      
         return  (str.length > 16) ? str.substr(0, 15) + ".." : str;
@@ -21,7 +26,7 @@ export default class DesktopSongListComp extends React.Component {
                         <ul className = "desktop-options">
 
                             <li>Rename</li>
-                            <li>Delete</li>
+                            <li onClick = {()=>{this.startDeletion()}}>Delete</li>
                             <li>Increase</li>
                         </ul>
                     

@@ -13,6 +13,7 @@ export default class DesktopHomeScreen extends React.Component {
         super();
         this.state = {
             songList : [],
+            rename_displayed : false,
             current_song_handler : null,
             confirm_showing :false , 
             error_showing :false,
@@ -39,7 +40,7 @@ export default class DesktopHomeScreen extends React.Component {
                     id = "no-song-msg">Looks like you haven't uploaded any songs yet... </h1>
                 <div id = "desktop-list-container">
                     {this.state.songList.map(song =>{
-                        return <DesktopSongListComp song = {song}/>
+                        return <DesktopSongListComp setparentstate = {this.setState} song = {song}/>
                     })}
                 </div>
             </div>
@@ -53,9 +54,9 @@ export default class DesktopHomeScreen extends React.Component {
                 parent_state = {this.setState}
                 size = {this.state.songList.length}
                 functionality = {this.functionality}
-                confirm_state = {this.confirm_showing}
-                success_state = {this.error_showing}
-                error_state = {this.success_showing}
+                confirm_state = {this.state.confirm_showing}
+                success_state = {this.state.error_showing}
+                error_state = {this.state.success_showing}
                     
             
             />
