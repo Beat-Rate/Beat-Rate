@@ -1,8 +1,21 @@
 import React from 'react';
 import playbttn from '../Components/Images/play-img.png';
 import "../Css/DesktopSongListComp.css";
-
+import SongHandler from "../SongHandler";
+import ListCompFunc from "../Components/ListCompFunctionality.js";
 export default class DesktopSongListComp extends React.Component {
+    constructor(props){
+        super(props);
+        this.functionality = new ListCompFunc(this);
+        this.song_handler = new SongHandler(
+            this.props.id,JSON.parse(localStorage.getItem("user")).uid);
+
+
+        this.state = {
+            data :""
+        };
+    }
+
     truncate(str){
      
         return  (str.length > 16) ? str.substr(0, 15) + ".." : str;
@@ -20,8 +33,8 @@ export default class DesktopSongListComp extends React.Component {
                         className = "desktop-play-img"></img>
                         <ul className = "desktop-options">
 
-                            <li>Rename</li>
-                            <li>Delete</li>
+                            <li onClick = {()=>{ this.functionality.startRename()}}>Rename</li>
+                            <li onClick = {()=>{this.functionality.startDeletion()}}>Delete</li>
                             <li>Increase</li>
                         </ul>
                     

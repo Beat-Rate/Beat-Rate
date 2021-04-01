@@ -2,20 +2,13 @@ import React from 'react';
 import Upper from '../Components/Upper';
 
 import AlertBox from '../Components/AlertBox';
-import firebase from 'firebase/app';
 import SongListComp from '../Components/SongListComp';
-//images
-import successlogo from '../Components/Images/SuccessIcon.png';
-import errorlogo from '../Components/Images/ErrorIcon.png';
 //css
 import "../Css/BottomBar.css";
 import "../Css/mySongsHeader.css";
 import "../Css/SongOptions.css";
 import "../Css/ListComponent.css"
-import RenamePopup from '../Components/RenamePopup';
-import SelectReviewSong from '../Components/SelectReviewSong';
-import ConfirmDeletionPopup from '../Components/ConfirmDeletionPopup';
-import CRUDActionResponse from '../Components/CRUDActionResponse';
+import CollectivePopups from "../Components/CollectivePopups.js";
 import HomeFunctionality from '../Components/HomeFunctionality.js';
 var { v4: uuidv4 } = require('uuid');
 export default class Home extends React.Component{
@@ -78,33 +71,16 @@ export default class Home extends React.Component{
                     </center>
                 </div>
                 <Upper  />
-                <RenamePopup display_state = {this.state.rename_displayed}
-                             current_song = {this.state.current_song_handler}
-                             setparentstate = {this.setState}
-                             size = {this.state.songList.length}
-                             />
-                <SelectReviewSong songList = {this.state.songList}/>
-                <center>
-                    <ConfirmDeletionPopup 
-                        fun = {()=>{this.functionality.removeSongFromFirebase()}} 
-                        type = "song" state = {this.state.confirm_showing}
-                        setparentstate = {this.setState}/>
-                    <CRUDActionResponse 
-                        id = "crud-success-home"
-                        img = {successlogo} 
-                        message = "Process Successfully Completed, You can now close this dialog."
-                        bttnLabel = "Got it"
-                        state = {this.state.success_showing}
-                        />
-                        
-                    <CRUDActionResponse 
-                        id = "crud-error-home"
-                        state = {this.state.error_showing}
-                        img = {errorlogo}
-                        message = "Opps! an error occurred, Please try again"
-                        bttnLabel = "Got it"/>
-                    
-                </center>
+                <CollectivePopups
+                    rename_displayed = {this.state.rename_displayed}
+                    current_song_handler = {this.state.current_song_handler}
+                    parent_state = {this.setState}
+                    size = {this.state.songList.length}
+                    functionality = {this.functionality}
+                    confirm_state = {this.state.confirm_showing}
+                    success_state = {this.state.error_showing}
+                    error_state = {this.state.success_showing}
+                    />
             </div>
 
         );
