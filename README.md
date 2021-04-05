@@ -2,6 +2,7 @@
 <h1 align="center">Beat-Rate</h1>
 <p align="center">
   <strong>The place where musicians get detailed reviews from normal consumers🎨</strong>
+  <strong>https://beat-rate.web.app/</strong>
 </p>
 
 
