@@ -49,3 +49,7 @@ before starting to contributing or for details on our code of conduct.
 
 
 
+
+## Sample GUI
+
+<img  src = "https://github.com/Beat-Rate/Beat-Rate/blob/master/React-Frontend/src/Components/Images/current-ui.png"  />
