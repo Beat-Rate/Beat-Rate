@@ -45,7 +45,7 @@ export default class BottomForm extends React.Component{
         var user = res.user;
         localStorage.setItem('logged', true);
         localStorage.setItem('user', JSON.stringify(user));
-        window.location.replace('http://localhost:3000/')
+        window.location.replace('/');
     }
     
     login(cell, pass){

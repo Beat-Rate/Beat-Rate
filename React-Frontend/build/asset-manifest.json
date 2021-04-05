@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "./static/css/main.6dc35d89.chunk.css",
+    "main.js": "./static/js/main.08058b1f.chunk.js",
+    "main.js.map": "./static/js/main.08058b1f.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.a02364b6.js",
+    "runtime-main.js.map": "./static/js/runtime-main.a02364b6.js.map",
+    "static/js/2.7cb74bc5.chunk.js": "./static/js/2.7cb74bc5.chunk.js",
+    "static/js/2.7cb74bc5.chunk.js.map": "./static/js/2.7cb74bc5.chunk.js.map",
+    "static/js/3.3b31c8db.chunk.js": "./static/js/3.3b31c8db.chunk.js",
+    "static/js/3.3b31c8db.chunk.js.map": "./static/js/3.3b31c8db.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.6dc35d89.chunk.css.map": "./static/css/main.6dc35d89.chunk.css.map",
+    "static/js/2.7cb74bc5.chunk.js.LICENSE.txt": "./static/js/2.7cb74bc5.chunk.js.LICENSE.txt",
+    "static/media/ErrorIcon.84ad1f06.png": "./static/media/ErrorIcon.84ad1f06.png",
+    "static/media/FiveStars.7843e909.png": "./static/media/FiveStars.7843e909.png",
+    "static/media/FourStars.67589edd.png": "./static/media/FourStars.67589edd.png",
+    "static/media/NoStars.93766233.png": "./static/media/NoStars.93766233.png",
+    "static/media/OneStar.0b0f4e84.png": "./static/media/OneStar.0b0f4e84.png",
+    "static/media/SuccessIcon.d07bbad0.png": "./static/media/SuccessIcon.d07bbad0.png",
+    "static/media/ThreeStars.c2aed014.png": "./static/media/ThreeStars.c2aed014.png",
+    "static/media/TwoStars.8e5b8892.png": "./static/media/TwoStars.8e5b8892.png",
+    "static/media/arrow.14813356.png": "./static/media/arrow.14813356.png",
+    "static/media/complete.ab1c3fc3.gif": "./static/media/complete.ab1c3fc3.gif",
+    "static/media/hateicon.66d302f2.png": "./static/media/hateicon.66d302f2.png",
+    "static/media/inappropriateicon.aa4d7be1.png": "./static/media/inappropriateicon.aa4d7be1.png",
+    "static/media/loader.a7aefd22.gif": "./static/media/loader.a7aefd22.gif",
+    "static/media/logowithnobg.82229ff8.png": "./static/media/logowithnobg.82229ff8.png",
+    "static/media/lowqualityicon.fd630330.png": "./static/media/lowqualityicon.fd630330.png",
+    "static/media/play-img.04509000.png": "./static/media/play-img.04509000.png",
+    "static/media/review-vector.bae9eaad.png": "./static/media/review-vector.bae9eaad.png",
+    "static/media/trollicon.7540e9c4.png": "./static/media/trollicon.7540e9c4.png",
+    "static/media/upload-vector.243172cd.png": "./static/media/upload-vector.243172cd.png",
+    "static/media/wallet-vector.019b0fb7.png": "./static/media/wallet-vector.019b0fb7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a02364b6.js",
+    "static/js/2.7cb74bc5.chunk.js",
+    "static/css/main.6dc35d89.chunk.css",
+    "static/js/main.08058b1f.chunk.js"
+  ]
+}

@@ -1,11 +1,13 @@
 import React from 'react';
 import "../Css/DesktopHome.css";
+import init from "../Components/FirebaseInit.js";
 import logo from "../Components/Images/logowithnobg.png";
 import DesktopBottomBar from '../Components/DesktopBottomBar.js';
 import HomeFunctionality from '../Components/HomeFunctionality.js';
 import DesktopSongListComp from '../Components/DesktopSongListComp.js';
 import Footer from '../Components/footer.js';
 import CollectivePopups from "../Components/CollectivePopups.js";
+init();
 export default class DesktopHomeScreen extends React.Component {
 
 
