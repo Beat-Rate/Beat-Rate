@@ -1,13 +1,13 @@
 import React from 'react';
 import Upper from '../Components/Upper';
-
+import init from "../Components/FirebaseInit.js";
 import AlertBox from '../Components/AlertBox';
 import SongListComp from '../Components/SongListComp';
 //css
 import "../Css/BottomBar.css";
 import "../Css/mySongsHeader.css";
 import "../Css/SongOptions.css";
-import "../Css/ListComponent.css"
+import "../Css/ListComponent.css";
 import CollectivePopups from "../Components/CollectivePopups.js";
 import HomeFunctionality from '../Components/HomeFunctionality.js';
 var { v4: uuidv4 } = require('uuid');
@@ -30,6 +30,7 @@ export default class Home extends React.Component{
 
     
     componentDidMount(){
+       init();
        this.functionality.gatherData();
   
     }
