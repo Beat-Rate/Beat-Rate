@@ -59,12 +59,15 @@ export default class DesktopHomeScreen extends React.Component {
                 size = {this.state.songList.length}
                 functionality = {this.functionality}
                 confirm_state = {this.state.confirm_showing}
-                success_state = {this.state.error_showing}
-                error_state = {this.state.success_showing}
+                success_state = {this.state.success_showing}
+                error_state = {this.state.error_showing}
                     
             
             />
-            <PlaceOnGlobal state = {this.state.global_popup_showing}/>
+            <PlaceOnGlobal 
+                song_handler = {this.state.current_song_handler} 
+                setparentstate = {this.setState} 
+                state = {this.state.global_popup_showing}/>
             </>
         )
     }

@@ -8,8 +8,12 @@ export default class PlaceOnGlobal extends Component {
 
                 <h3>Are you sure you would like to gain reviews?</h3>
                 <center>
-                    <button id = "yespo">Yes</button>
-                    <button id = "nopo">No</button>
+                    <button onClick = {()=>{this.props.song_handler.placeInGlobal(this.props.setparentstate)}} id = "yespo">Yes</button>
+                    <button 
+                        id = "nopo" 
+                        onClick ={()=>{this.props.setparentstate({global_popup_showing:false})}}>
+                        No
+                    </button>
                 </center>
                 
             </div>

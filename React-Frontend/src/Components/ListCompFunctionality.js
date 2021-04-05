@@ -26,6 +26,8 @@ export default class ListCompFunc {
         
     }
     promptSongOnGlobal(){
-        this.parent.props.setparentstate({global_popup_showing :true});
+        this.parent.props.setparentstate(
+            {global_popup_showing :true,
+                current_song_handler :this.parent.song_handler});
     }
 }

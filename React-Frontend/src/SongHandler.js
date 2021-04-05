@@ -28,16 +28,20 @@ export default class SongHandler{
         this.reference.update(updates)
     }
     
-    placeInGlobal(){
+    placeInGlobal(setparentstate){
         let globalRef = firebase.database().ref("Global")
         this.reference.on("value"  , data=>{
             let song = data.val();
+        
+            song["pathing"] = this.pathing;    //getting the reference to the user's version
             globalRef.push(song , error=>{
                 if(error){
-
+                 
+                    setparentstate({error_showing :true})
                 }
                 else{
-                    
+                   
+                    setparentstate({success_showing :true})
                 }
             })
         })
