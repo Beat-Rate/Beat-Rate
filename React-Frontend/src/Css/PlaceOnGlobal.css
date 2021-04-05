@@ -1,0 +1,28 @@
+#place-on-global{
+    position: absolute;
+    width: 23%;
+    left:59%;
+    top: 12%;
+    background-color: #303e52;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.582), 0 6px 20px 0 rgba(0, 0, 0, 0.561);
+}
+#place-on-global h3{
+    color: white;
+}
+#nopo:hover{
+    color: gray;
+}
+#yespo:hover{
+     color: green;
+}
+#place-on-global button{
+    font-size: 2em;
+    margin: 2%;
+    background: none;
+    color: white;
+    border: none;
+}
+#place-on-global h3{
+    margin-left: 3%;
+}

@@ -36,6 +36,7 @@ export default class HomeFunctionality {
         })
     }
 
+
     
 
 }

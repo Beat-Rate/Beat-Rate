@@ -23,6 +23,7 @@ export default class CollectivePopups extends Component {
             <CRUDActionResponse 
                         id = "crud-success-home"
                         img = {successlogo} 
+                        fun = {()=>{this.props.parent_state({success_showing :false})}}
                         message = "Process Successfully Completed, You can now close this dialog."
                         bttnLabel = "Got it"
                         state = {this.props.success_state}
@@ -32,6 +33,7 @@ export default class CollectivePopups extends Component {
                          id = "crud-error-home"
                         state = {this.props.error_state}
                         img = {errorlogo}
+                        fun = {()=>{this.props.parent_state({error_showing :false})}}
                         message = "Opps! an error occurred, Please try again"
                         bttnLabel = "Got it"/>
             </center>

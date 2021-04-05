@@ -35,7 +35,7 @@ export default class DesktopSongListComp extends React.Component {
 
                             <li onClick = {()=>{ this.functionality.startRename()}}>Rename</li>
                             <li onClick = {()=>{this.functionality.startDeletion()}}>Delete</li>
-                            <li>Increase</li>
+                            <li onClick = {()=>{this.functionality.promptSongOnGlobal()}}>Increase</li>
                         </ul>
                     
 
