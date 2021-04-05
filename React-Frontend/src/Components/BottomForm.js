@@ -2,17 +2,7 @@ import React from 'react';
 import '../Css/BottomForm.css';
 import AlertBox from '../Components/AlertBox';
 import firebase from 'firebase/app';
-
-var firebaseConfig = {
-    apiKey: "AIzaSyA8pLz0it3fsyGDM897C-5d447BsbQQyWA",
-    authDomain: "my-awesome-project-ebf03.firebaseapp.com",
-    databaseURL: "https://my-awesome-project-ebf03.firebaseio.com",
-    projectId: "my-awesome-project-ebf03",
-    storageBucket: "my-awesome-project-ebf03.appspot.com",
-    messagingSenderId: "1097690692681",
-    appId: "1:1097690692681:web:c4fa8df4549fe75f38d398"
-  };
-firebase.initializeApp(firebaseConfig);
+import init from "../Components/FirebaseInit.js";
 
 export default class BottomForm extends React.Component{
     constructor(){
@@ -28,6 +18,7 @@ export default class BottomForm extends React.Component{
     }
 
     componentDidMount(){
+        init();
         if(window.location.href.indexOf("/signin") > -1){
             this.setState({text: "Login"});
         }
@@ -58,6 +49,7 @@ export default class BottomForm extends React.Component{
     }
     
     login(cell, pass){
+        console.log(firebase.auth())
         firebase.auth().signInWithEmailAndPassword(`${cell}@ocaccounts.co.za`, pass).then(res=>{
             this.setAuthInformationAndReload(res)
 
@@ -72,6 +64,7 @@ export default class BottomForm extends React.Component{
             });
         }catch(e){
             this.showError(e);
+            console.log(e)
         }
         }else{
             this.showError("Invalid details. Password must be longer than 6 characters")

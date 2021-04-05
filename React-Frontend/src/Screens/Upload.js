@@ -9,9 +9,10 @@ import logo from '../Components/Images/logowithnobg.png';
 import Complete from "../Components/Images/complete.gif";
 import uploadimage from '../Components/Images/upload-page-image.png';
 import arrow from '../Components/Images/arrow.png';
+import init from "../Components/FirebaseInit.js";
 //css
 import "../Css/NewUpload.css"
-
+init();
 var playingAudio;
 var { v4: uuidv4 } = require('uuid');
 export default class Upload extends React.Component{
