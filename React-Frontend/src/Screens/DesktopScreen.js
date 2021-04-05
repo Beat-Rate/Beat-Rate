@@ -7,6 +7,7 @@ import HomeFunctionality from '../Components/HomeFunctionality.js';
 import DesktopSongListComp from '../Components/DesktopSongListComp.js';
 import Footer from '../Components/footer.js';
 import CollectivePopups from "../Components/CollectivePopups.js";
+import PlaceOnGlobal from "../Components/PlaceOnGlobal.js";
 init();
 export default class DesktopHomeScreen extends React.Component {
 
@@ -19,7 +20,8 @@ export default class DesktopHomeScreen extends React.Component {
             current_song_handler : null,
             confirm_showing :false , 
             error_showing :false,
-            success_showing :false//test
+            success_showing :false,
+            global_popup_showing :false
         }
         this.functionality = new HomeFunctionality(this);
         this.setState = this.setState.bind(this);
@@ -62,7 +64,7 @@ export default class DesktopHomeScreen extends React.Component {
                     
             
             />
-
+            <PlaceOnGlobal state = {this.state.global_popup_showing}/>
             </>
         )
     }
