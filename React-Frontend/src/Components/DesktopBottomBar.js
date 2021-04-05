@@ -28,4 +28,4 @@ export default class DesktopBottomBar extends React.Component {
             </div>
         )
     }
-}
+} 
